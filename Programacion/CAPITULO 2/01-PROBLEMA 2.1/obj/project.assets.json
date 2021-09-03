@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-PROBLEMA 2.1\\01-PROBLEMA 2.1.csproj",
-      "projectName": "01-PROBLEMA 2.1",
-      "projectPath": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-PROBLEMA 2.1\\01-PROBLEMA 2.1.csproj",
+      "projectUniqueName": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-Problema 2.1\\01-Problema 2.1.csproj",
+      "projectName": "01-Problema 2.1",
+      "projectPath": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-Problema 2.1\\01-Problema 2.1.csproj",
       "packagesPath": "C:\\Users\\juan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-PROBLEMA 2.1\\obj\\",
+      "outputPath": "C:\\Users\\juan_\\Desktop\\CursoStrapp\\Programacion\\CAPITULO 2\\01-Problema 2.1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juan_\\AppData\\Roaming\\NuGet\\NuGet.Config"

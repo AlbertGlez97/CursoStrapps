@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01_PROBLEMA_2._1
+namespace _01_Problema_2._1
 {
     class Program
     {
@@ -14,18 +14,18 @@ namespace _01_PROBLEMA_2._1
            decimal depreciacionacomulada=0;
            decimal valoranual=costoinicial;
            int contador=1;
+
            Console.WriteLine("Año           Depreciacion            Depreciacion Acomulada       ValorAnual");
 
             while (contador <= NumeroAnios)
             {
-                Anio += 1;
-                depreciacionacomulada += depreciacioAnual;
-                valoranual -= depreciacioAnual;
+                Anio=Anio+1;
+                depreciacionacomulada = depreciacionacomulada + depreciacioAnual;
+                valoranual = valoranual - depreciacioAnual;
                 Console.WriteLine("{0} ({1})            {2}               {3}                         {4}",contador, Anio, depreciacioAnual, depreciacionacomulada, valoranual);
-                contador += 1;
+                contador = contador +1;
                 
-            }
-
+            } 
         }
     }
 }

@@ -1,0 +1,32 @@
+1¿Que es Git?
+
+	Git es uno de estos sistemas de control, que permite comparar el código de un archivo para ver 	las diferencias entre las versiones, restaurar versiones antiguas si algo sale mal, y fusionar 	los cambios de distintas versiones.
+
+2¿Que comando utilizo para la configuracion global de nombre y correo?
+
+	git config --global user.name "John Doe"
+	git config --global user.email johndoe@example.com
+
+3¿Que comando utilizo para replicar un repositorio remoto en local?
+
+	git clone
+
+4¿Que comando utilizo para obtener la ultima version del codigo?
+
+	git log
+
+5¿Que comando utilizo para saber el estatus de mi repositorio local?
+
+	git status
+
+6¿Que comando utilizo para agregar cambios al directorio de trabajo?
+
+	git add -A (Agrega todos los archivos del Working Directory al Staging Area)
+
+7¿Que comando utilizo para confirmar y etiquetar el cambio?
+
+	git commit -m "Descripcion"	
+
+8¿Que comando utilizo para subir mis cambios al repositorio remoto?
+
+	git push nombre rama

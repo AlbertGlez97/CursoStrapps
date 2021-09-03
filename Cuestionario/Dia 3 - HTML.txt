@@ -1,0 +1,87 @@
+HTML
+1-¿Qué es la codificación de caracteres?
+
+Es el proceso de transformación de caracteres en secuencias de números
+
+2-¿Qué es el código ascii?
+
+Es un estándar para la representación de caracteres en cualquier dispositivo electrónico, haciendo referencia a una codificación fija que asigna a caracteres imprimibles como letras, números y signos de puntuación y a caracteres de control no imprimibles un código concreto
+
+3-¿Qué es una etiqueta?
+
+El texto en una página web está «marcado» con estos códigos para dar instrucciones al navegador web sobre cómo mostrar el texto
+
+4-¿En cuántas partes se divide un documento HTML?
+
+Se dividen en dos partes: la cabecera y el cuerpo. La cabecera incluye información sobre la propia página, como por ejemplo su título y su idioma. El cuerpo de la página incluye todos sus contenidos, como párrafos de texto e imágenes.
+
+5-¿En qué parte del documento HTML se pone el título y el idioma?
+
+La cabecera 
+
+6-¿En qué parte del documento HTML se pone el contenido, texto e imágenes?
+
+En el cuerpo de la página
+
+7-¿Para qué sirve la etiqueta head?
+
+Delimita la parte de la cabecera del documento. La cabecera contiene información sobre el propio documento HTML, como por ejemplo su título y el idioma de la página
+
+8-¿Para qué sirve la etiqueta body?
+
+Delimita el cuerpo del documento HTML. El cuerpo encierra todos los contenidos que se muestran al usuario (párrafos de texto, imágenes, tablas)
+
+9-¿Para qué sirve la etiqueta em? 
+
+Para poner texto en cursiva
+
+10-¿Para qué sirve la etiqueta del?
+
+Para tachar un texto 
+
+11-¿Qué son los atributos?
+
+Es personalizar las etiquetas HTML mediante cierta información adicional 
+
+12-¿Qué atributo se utiliza para identificar el elemento HTML?
+
+	-id
+
+13-¿Qué atributo se utiliza para establecer estilos por medio clase(s) CSS al elemento HTML?
+
+	-class 
+
+14-¿Qué atributo se utiliza para establecer estilos directamente al elemento HTML?
+
+	-style
+
+15-¿Qué atributo se utiliza para establecer un título al elemento HTML?
+
+	-title
+
+16-¿Para qué se utilizan los atributos de internacionalización?
+
+Para aquellas páginas que muestran sus contenidos en varios idiomas y para aquellas que quieren indicar de forma explítica el idioma de sus contenidos
+
+17-¿Para que se utilizan los atributos de eventos?
+
+Se utilizan en las páginas web que incluyen código JavaScript para realizar acciones dinámicas sobre los elementos de la página.
+
+18-¿Para qué se utilizan los atributos de foco?
+
+Cuando el usuario selecciona un elemento en una aplicación
+
+19-¿Cual es la diferencia entre elemento y etiqueta HTML?
+
+Elemento solo se refiere a las partes que componen los documentos HTML , formados por:
+
+	-Una etiqueta de apertura.
+	-Cero o más atributos.
+	-Texto encerrado por la etiqueta.
+	-Una etiqueta de cierre.
+
+Y la etiqueta solamente es el «marcado»
+
+20-¿Cual es la diferencia entre elementos en bloque y en línea?
+
+La principal diferencia entre los dos tipos de elementos es la forma en la que ocupan el espacio disponible en la página. Los elementos de bloque siempre empiezan en una nueva línea y ocupan todo el espacio disponible hasta el final de la línea, aunque sus contenidos no lleguen hasta el final de la línea. Por su parte, los elementos en línea sólo ocupan el espacio necesario para mostrar sus contenidos.

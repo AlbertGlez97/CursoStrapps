@@ -1,0 +1,39 @@
+Describe con tus propias palabras qué es la fase de análisis.
+
+	-En esta fase primero se tiene que entender que es lo que se va resolver, 	 solucionar
+
+Describe con tus propias palabras qué es la fase de diseño.
+
+	-Se disena la solucion para llegar al objetivo
+
+Describe con tus propias palabras qué es la fase de Compilación y Ejecución.
+
+	-Compilar es pasar de un lenguaje entendible por los humanos a un lenguaje 	 entendible por la máquina, el código máquina o binario
+
+	-Ejecucion es un objeto que realiza una determinada acción cuando se abre
+
+
+Describe con tus propias palabras qué es la fase de Verificación.
+
+	-Va de la mano de Depuracion , es el proceso de ejecución del programa con una 	  	  	 variedad de datos de entrada, llamados datos de test o prueba, que                     	 determinarán si el programa tiene o no errores (“bugs”)
+
+Describe con tus propias palabras qué es la fase de Depuración.
+
+	-Aqui se detiene el programa y se corrigen sus errores
+
+Describe con tus propias palabras qué es la fase de Mantenimiento.
+
+	-Es la actualizacion de datos como lo vaya requiriendo el usuario
+
+Describe con tus propias palabras qué es la fase de Documentación.
+
+	-Es la anotacion del todo proceso de la construcción del programa
+
+¿Qué es compilar?
+
+	-Es el proceso de transformar un programa informático escrito en un lenguaje en un 		 programa equivalente en otro formato
+
+¿Qué es depurar?
+
+	-Es el proceso de encontrar y eliminar los errores que pueden cometer softwares y 	 	 hardwares.
+
