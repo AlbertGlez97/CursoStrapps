@@ -1,0 +1,79 @@
+1.¿Para qué sirve la etiqueta p?
+
+Permite definir los párrafos que forman el texto de una página
+
+2.¿Qué tipo de elemento es la etiqueta p?
+
+Bloque
+
+3.¿Para qué sirven las etiquetas h1, h2, h3, h4, h5 y h6?
+
+Define los títulos de las secciones de mayor importancia de la página
+
+4.¿Cuál de las etiquetas h1, h2, h3, h4, h5 y h6 es la de mayor importancia?
+
+La etiqueta h1 
+
+5.¿Cuál de las etiquetas h1, h2, h3, h4, h5 y h6 es la de menor importancia?
+
+La etiqueta h6
+
+6.¿Qué tipo de elementos son las etiquetas h1, h2, h3, h4, h5 y h6?
+
+Bloque
+
+7.¿Para qué sirve la etiqueta em?
+
+Marca un texto indicando que su importancia es mayor que la del resto del texto
+
+8.¿Para qué sirve la etiqueta strong?
+
+Indica que un determinado texto es de la mayor importancia dentro de la página
+
+9.¿Qué tipo de elemento es la etiqueta em?
+
+En línea
+
+10.¿Qué tipo de elemento es la etiqueta strong?
+
+En línea
+
+11.¿Para qué sirve la etiqueta del?
+
+Es el texto eliminado, se muestra tachado de forma que el usuario pueda identificarlo fácilmente como un texto que formaba parte del texto original y que ya no tiene validez
+
+12.¿Para qué sirve la etiqueta ins?
+
+El texto insertado se muestra subrayado, de forma que el usuario pueda identificarlo como un texto nuevo que no formaba parte del texto original
+
+13.¿Qué tipo de elemento es la etiqueta del?
+
+Bloque y en línea
+
+14.¿Qué tipo de elemento es la etiqueta ins?
+
+Bloque y en línea
+
+15.¿Para qué sirve la etiqueta blockquote?
+
+pPermite indicar mediante el atributo cite la dirección de un documento del que se ha extraído la cita
+
+16.¿Qué tipo de elemento es la etiqueta blockquote?
+
+Bloque
+
+17.¿Para qué sirve la etiqueta abbr?
+
+Se emplea para marcar las abreviaturas del texto y proporcionar el significado de esas abreviaturas
+
+18.¿Qué tipo de elemento es la etiqueta abbr?
+
+En línea
+
+19.¿Para qué sirve la etiqueta dfn?
+
+Se emplea para marcar las definiciones de ciertos términos y proporcionar el significado de esos términos
+
+20.¿Qué tipo de elemento es la etiqueta dfn?
+
+En línea

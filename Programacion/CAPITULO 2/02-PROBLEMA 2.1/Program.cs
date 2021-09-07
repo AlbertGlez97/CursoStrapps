@@ -4,6 +4,9 @@ namespace _02_PROBLEMA_2._1
 {
     class Program
     {
+        /* EJEMPLO 2.1
+        Calcular la paga neta de un trabajador conociendo el número de horas trabajadas, la tarifa horaria y la tasa de
+        impuestos. */
         static void Main(string[] args)
         {
            //Leer Horas, Tarifa, Tasa 

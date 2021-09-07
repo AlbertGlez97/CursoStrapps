@@ -4,6 +4,9 @@ namespace _04_PROBLEMA_2._4
 {
     class Program
     {
+
+       /*  EJEMPLO 2.4
+        Un cliente ejecuta un pedido a una fábrica. La fábrica examina en su banco de datos la ficha del cliente, si el cliente es solvente entonces la empresa acepta el pedido; en caso contrario, rechazará el pedido. Redactar el algoritmo correspondiente. */
         static void Main(string[] args)
         {
             //Leer pedido 
