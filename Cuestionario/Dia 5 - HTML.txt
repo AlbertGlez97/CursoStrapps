@@ -1,0 +1,27 @@
+1- ¿Para qué sirve la etiqueta span?
+
+Se emplea para marcar cualquier elemento que no se puede marcar con las otras etiquetas definidas. Por ejemplo, la etiqueta <span> se utiliza para marcar el teléfono y la dirección de correo electrónico
+
+2- ¿Qué tipo de elemento es la etiqueta span?
+
+Elemento especial, y por lo tanto en línea.
+
+3- ¿Cómo se interpreta visualmente los espacios en blanco, tabuladores, retornos de carro y carácter de nueva línea en un navegador?
+
+HTML ignora todos los espacios en blanco sobrantes, es decir, todos los espacios en blanco que no son el espacio en blanco que separa las palabras.
+
+4- ¿Para qué sirve la etiqueta br?
+
+Fuerza al navegador a insertar una nueva línea
+
+5- ¿A qué equivale el texto &nbsp;?
+
+Equivale a un espacio en blanco
+
+6- ¿Para qué sirve la etiqueta pre?
+
+Muestra el texto que encierra tal y como está escrito (respetando los espacios en blanco)
+
+7- ¿Qué tipo de elemento es la etiqueta pre?
+
+Bloque
