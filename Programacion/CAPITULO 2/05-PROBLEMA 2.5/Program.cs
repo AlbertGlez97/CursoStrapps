@@ -11,22 +11,24 @@ namespace _05_PROBLEMA_2._5
         static void Main(string[] args)
         {
            
-             Console.WriteLine("Digita el numero a comparar");
-             Decimal primo=Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Digita un numero");
+             Decimal numero=decimal.Parse(Console.ReadLine());
 
-             for(int i=2; i<=primo; ++i){
+             for(int i=2; i<=numero; ++i){
 
-                 Decimal division = primo / i;
-                 Console.WriteLine(division);
+                 Decimal division = numero / i;
+
+
+                 Console.WriteLine(numero +" / "+ i +" = "+ division);
 
                 //Si es un numero entero no es primo
                  if(division % 2 == 0){
-                      Console.WriteLine("El numero "+primo+" no es primo");
+                      Console.WriteLine("El numero "+numero+" no es primo");
                       break;
                  }
-
-                 if(i == primo){
-                     Console.WriteLine("El numero "+primo+" es primo");
+                    
+                 if(i == numero){
+                     Console.WriteLine("El numero "+numero+" es primo");
                  }
              }
 
