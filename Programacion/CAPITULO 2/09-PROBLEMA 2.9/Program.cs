@@ -27,7 +27,7 @@ namespace _09_PROBLEMA_2._9
                     horasSemana = 40;
                     horasExtras = empleado.horasTrabajadas - horasSemana;
                     pagoExtra = (1.5M * empleado.salarioHora) * horasExtras;
-                    pagoSemanal = (40 * empleado.salarioHora);
+                    pagoSemanal = (horasSemana * empleado.salarioHora);
                     total = pagoExtra + pagoSemanal;
 
                 }
