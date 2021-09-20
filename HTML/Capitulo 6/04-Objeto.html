@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    <object title="La Tierra vista desde el espacio" classid="http://www.observer.mars/TheEarth.py">
+        <!-- Formato alternativo en forma de vídeo -->
+        <object data="video/planeta.mpeg" type="application/mpeg">
+          <!-- Otro formato alternativo mediante una imagen GIF -->
+          <object data="img/tierra-planeta.gif" type="image/gif">
+            <!-- Si el navegador no soporta ningún formato, se muestra el siguiente texto -->
+            La <strong>Tierra</strong> vista desde el espacio.
+          </object>
+        </object>
+      </object>
+</body>
+</html>
