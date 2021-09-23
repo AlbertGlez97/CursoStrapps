@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con controles de tipo lista desplegable</title>
+  </head>
+  <body>
+    <h1>Rellena tu CV</h1>
+
+    <form
+      action=""
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="provincia">Provincia</label> <br />
+        <select id="provincia" name="provincia">
+          <option value="" selected="selected">- selecciona -</option>
+          <option value="01">Aguascalientes</option>
+          <option value="02">Baja California</option>
+          <option value="03">Baja California Sur</option>
+          <option value="04">Campeche</option>
+          <option value="05">Coahuila de Zaragoza</option>
+          <option value="06">Colima</option>
+          <option value="07">Chiapas</option>
+          <option value="08">Chihuahua</option>
+          <option value="09">Distrito Federal</option>
+          <option value="10">Durango</option>
+          <option value="11">Guanajuato</option>
+          <option value="12">Guerrero</option>
+          <option value="13">Hidalgo</option>
+          <option value="14">Jalisco</option>
+          <option value="15">México</option>
+          <option value="16">Michoacán de Ocampo</option>
+        </select>
+
+        <br /><br />
+
+        <label for="fecha">Fecha de nacimiento</label> <br />
+        <input type="text" size="3" maxlength="2" id="fecha" name="fecha" />
+
+        <select id="fecha_mes" name="fecha_mes">
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+
+        <input
+          type="text"
+          size="5"
+          maxlength="4"
+          id="fecha_ano"
+          name="fecha_ano"
+        />
+
+        <br /><br />
+
+        <label for="temasDeInteres">Temas de interés</label> <br />
+        <select
+          multiple="multiple"
+          size="5"
+          id="temasDeInteres"
+          name="temasDeInteres"
+        >
+          <option value="101">Administración de bases de datos</option>
+          <option value="102">Análisis y programación</option>
+          <option value="103">Arquitectura</option>
+          <option value="104">Calidad</option>
+          <option value="105">Business Intelligence</option>
+        </select>
+      </fieldset>
+    </form>
+  </body>
+</html>
