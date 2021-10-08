@@ -4,7 +4,7 @@
     <title>Empleado - Listado de personal</title>
 </head>
 
-<body onload="iniciarPagina()">
+<body onload="iniciarPagina();">
     <div>
         <h2>Listado de personal</h2>
         <br>
@@ -12,7 +12,7 @@
         <a href="/Empleado/Registro">Agregar Empleado</a>
         <br>
         <br>
-        <table style="width: 100%;">
+        <table id="table" style="width: 100%;">
             <tdead>
                 <tr>
                     <th>
@@ -39,41 +39,63 @@
                 </tr>
             </tdead>
             <tbody id="datosEmpleado">
-               
+
             </tbody>
         </table>
     </div>
     <script>
-        function iniciarPagina(){
-            
+        function iniciarPagina() {
+
             const $datosEmpleado = document.getElementById("datosEmpleado"),
-            $fragment = document.createDocumentFragment();
+                $fragment = document.createDocumentFragment();
 
             var requestOptions = {
                 method: 'GET',
                 redirect: 'follow'
-                };
+            };
 
-                fetch("https://localhost:5006/Empleado", requestOptions)
+            fetch("https://localhost:5006/Empleado", requestOptions)
                 .then(response => response.json())
                 .then(result => {
-                    result.forEach((emple) =>{
+                    result.forEach((emple) => {
                         const $tr = document.createElement("tr");
-                        $tr.innerHTML=`<td>${emple.idEmpleado}</td>
-                                       <td>${emple.nombre}</td>
-                                       <td>${emple.puesto}</td>
-                                       <td>${emple.telefono}</td>
-                                       <td>${emple.correo}</td>
-                                       <td><a href="/Empleado/Editar">Editar</a></td>
-                                       <td><a href="#">Eliminar</a></td>`;
+                        $tr.innerHTML = `<td>${emple.idEmpleado}</td>
+                               <td>${emple.nombre}</td>
+                               <td>${emple.puesto}</td>
+                               <td>${emple.telefono}</td>
+                               <td>${emple.correo}</td>
+                               <td><a href="/Empleado/Registro?id=${emple.idEmpleado}" class="edit">Editar</a></td>
+                               <td><a href="" class="delete" data-id=${emple.idEmpleado}>Eliminar</a></td>`;
                         $fragment.appendChild($tr);
                     })
                     $datosEmpleado.appendChild($fragment);
                     console.log(result)
                 })
-                .catch(error => console.log('error', error));
+                .catch(err => {
+                    let message = err.statusText || "Ocurrio un error";
+                    console.log(`error ${err.status}: ${message}`);
+                })
+        }
+
+        document.addEventListener("click", (e) => {
+            if (e.target.matches(".delete")) {
+                e.preventDefault();
+                let isDelete = confirm(`Estas seguro de eliminar el id ${e.target.dataset.id}`)
+
+                if (isDelete) {
+                    //Delete - DELETE
+                    fetch(`https://localhost:5006/Empleado/${e.target.dataset.id}`, {
+                        method: `DELETE`,
+                        headers: {
+                            "Content-type": "application/json; charset=utf-8"
+                        }
+                    })
+                    location.reload();
+                }
             }
+        })
 
     </script>
 </body>
+
 </html>

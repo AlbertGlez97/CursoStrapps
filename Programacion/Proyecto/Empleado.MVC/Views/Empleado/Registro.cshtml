@@ -1,20 +1,20 @@
-<h1>Alta de personal</h1>
+<h1 id="titulo"></h1>
 <style>
-    table{
+    table {
         width: 100%;
     }
 </style>
-<fieldset>
+<fieldset class="infobasica">
     <legend>Información básica</legend>
     <br><br>
     <table>
         <tr>
-            <td><label for="nombre">Nombre: </label></td>               
-            <td><input type="text" name="nombre" id="nombre"></td>
+            <td><label for="nombre">Nombre: </label></td>
+            <td><input type="text" name="nombre" id="nombre" data-empleado></td>
             <td><label for="apellidop">Apellido Paterno: </label></td>
-            <td><input type="text" name="paterno" id="paterno"></td>
+            <td><input type="text" name="paterno" id="paterno" data-empleado></td>
             <td><label for="apellidom">Apellido Materno: </label></td>
-            <td><input type="text" name="materno" id="materno"></td>
+            <td><input type="text" name="materno" id="materno" data-empleado></td>
         </tr>
     </table>
     <br><br>
@@ -27,33 +27,33 @@
         <tr>
             <td><label for="sexo">Sexo:</label></td>
             <td>
-                <select id="slcsexo" name="slcSexo">
+                <select id="slcsexo" name="slcSexo" data-empleado>
                     <option value="seleccionasexo" selected="selected">- Selecciona -</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
                 </select>
             </td>
 
             <td><label for="curp">CURP:</label></td>
-            <td><input type="text" name="curp" id="curp" maxlength="18"></td>
-            
+            <td><input type="text" name="curp" id="curp" maxlength="18" data-empleado></td>
+
             <td><label for="fechanacimiento">Fecha de nacimiento:</label></td>
-            <td><input type="date" name="nacimiento" value="nacimiento"></td>
+            <td><input type="date" name="nacimiento" id="nacimiento" data-empleado></td>
             </td>
         </tr>
         <tr>
             <td><label for="nacionalidad">Nacionalidad:</label></td>
             <td>
-                <select name="slcNacionalidad" id="slcnacionalidad">
+                <select name="slcNacionalidad" id="slcnacionalidad" data-empleado>
                     <option value="seleccionaN" selected="selected">- Selecciona -</option>
                     <option value="mexicana">Mexicana</option>
                     <option value="extranjera">Extranjera</option>
                 </select>
             </td>
             <td><label for="rfc">RFC:</label></td>
-            <td><input type="text" name="rfc" id="rfc"></td>
+            <td><input type="text" name="rfc" id="rfc" data-empleado></td>
             <td><label for="nns">NSS:</label></td>
-            <td><input type="text" name="nss" id="nss"></td>
+            <td><input type="text" name="nss" id="nss" data-empleado></td>
         </tr>
     </table>
     <br><br>
@@ -65,20 +65,20 @@
     <table>
         <tr>
             <td><label for="calle">Calle:</label></td>
-            <td><input type="text" name="calle" id="calle"></td>
+            <td><input type="text" name="calle" id="calle" data-empleado></td>
             <td><label for="numeroi">Numero interior:</label></td>
-            <td><input type="text" name="numeroi" id="numeroi"></td>
+            <td><input type="text" name="numeroi" id="numeroi" data-empleado></td>
             <td><label for="numeroe">Numero exterior:</label></td>
-            <td><input type="text" name="numeroe" id="numeroe"></td>
+            <td><input type="text" name="numeroe" id="numeroe" data-empleado></td>
         </tr>
         <tr>
             <td><label for="colonia">Colonia:</label></td>
-            <td><input type="text" name="colonia" id="colonia"></td>
+            <td><input type="text" name="colonia" id="colonia" data-empleado></td>
             <td><label for="municipio">Municipio:</label></td>
-            <td><input type="text" name="municipio" id="municipio"></td>
+            <td><input type="text" name="municipio" id="municipio" data-empleado></td>
             <td><label for="estado">Estado:</label></td>
             <td>
-                <select name="slcEstado" id="slcestado">
+                <select name="slcEstado" id="slcestado" data-empleado>
                     <option value="seleccionaN" selected="selected">- Selecciona -</option>
                     <option value="aguas">Aguas Calientes</option>
                     <option value="bajacnorte">Baja California Norte</option>
@@ -88,7 +88,7 @@
         </tr>
         <tr>
             <td><label for="cp">Codigo Postal:</label></td>
-            <td><input type="text" name="cp" id="cp"></input></td>
+            <td><input type="text" name="cp" id="cp" data-empleado></input></td>
         </tr>
     </table>
     <br><br>
@@ -100,7 +100,7 @@
         <tr>
             <td><label for="puesto">Puesto:</label></td>
             <td>
-                <select name="slcPuesto" id="slcpuesto">
+                <select name="slcPuesto" id="slcpuesto" data-empleado>
                     <option value="selecciona" selected="selected">- Selecciona -</option>
                     <option value="general">Director General</option>
                     <option value="operaciones">Director de Operaciones</option>
@@ -111,14 +111,14 @@
                 </select>
             </td>
             <td><label for="fechaingreso">Fecha de Ingreso:</label></td>
-            <td><input type="date" name="fechaingreso" id="fechaingreso"></td>
+            <td><input type="date" name="fechaingreso" id="fechaingreso" data-empleado></td>
             <td><label for="salario">Salario Diario:</label></td>
-            <td><input type="text" name="salario" id="salario"></td>
+            <td><input type="text" name="salario" id="salario" data-empleado></td>
         </tr>
         <tr>
             <td><label for="horario">Horario:</label></td>
             <td>
-                <select name="slcHorario" id="slchorario">
+                <select name="slcHorario" id="slchorario" data-empleado>
                     <option value="selecciona">- Selecciona -</option>
                     <option value="">L-V 8 - 5</option>
                     <option value="">L-V 8 - 3 y S 8 - 12</option>
@@ -126,7 +126,7 @@
                 </select>
             </td>
             <td><label for="totalf">Total Faltas:</label></td>
-            <td><input type="text" name="totalf" id="totalf"></td>
+            <td><input type="text" name="totalf" id="totalf" data-empleado></td>
         </tr>
     </table>
     <br><br>
@@ -134,3 +134,70 @@
 
 <button id="bttnGuardar" type="button">Guardar</button>
 <button id="bttnCerrar" type="button" onclick="window.location.href='/Empleado/Listado'">Cerrar</button>
+
+<script>
+    const $form = document.getElementsByClassName(".infobasica");
+    const $titulo = document.getElementById("titulo");
+    const valores = window.location.search;
+    const urlParams = new URLSearchParams(valores);
+    const id = urlParams.get('id');
+
+    let $nombre = document.getElementById("nombre")
+    let $paterno = document.getElementById("paterno")
+    let $materno = document.getElementById("materno")
+    let $slcsexo = document.getElementById("slcsexo")
+    let $curp = document.getElementById("curp")
+    let $nacimiento = document.getElementById("nacimiento")
+    let $slcnacionalidad = document.getElementById("slcnacionalidad")
+    let $rfc = document.getElementById("rfc")
+    let $nss = document.getElementById("nss")
+    let $calle = document.getElementById("calle")
+    let $numeroi = document.getElementById("numeroi")
+    let $numeroe = document.getElementById("numeroe")
+    let $colonia = document.getElementById("colonia")
+    let $municipio = document.getElementById("municipio")
+    let $slcestado = document.getElementById("slcestado")
+    let $slcpuesto = document.getElementById("slcpuesto")
+    let $fechaingreso = document.getElementById("fechaingreso")
+    let $salario = document.getElementById("salario")
+    let $slchorario = document.getElementById("slchorario")
+    let $totalf = document.getElementById("totalf")
+
+    if (id != null) {
+
+        fetch(`https://localhost:5006/Empleado/${id}`)
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
+                $titulo.textContent = `Editar a ${result.nombre} ${result.apellidoPaterno}`
+
+                $nombre.value = result.nombre;
+                $paterno.value = result.apellidoPaterno;
+                $materno.value = result.apellidoMaterno;
+                $slcsexo.value = result.sexo;
+                $curp.value = result.curp;
+                $nacimiento.value = result.fechaNacimiento;
+                $slcnacionalidad.value = result.nacionalidad;
+                $rfc.value = result.rfc;
+                $nss.value = result.nss;
+                $calle.value = result.direccion.calle;
+                $numeroi.value = result.direccion.numeroInterior;
+                $numeroe.value = result.direccion.numeroExterior
+                $colonia.value = result.direccion.colonia;
+                $municipio.value = result.direccion.municipio;
+                $slcestado.value = result.direccion.estado;
+                $slcpuesto.value = result.puesto;
+                $fechaingreso.value = result.fechaIngreso;
+                $salario.value = result.salarioDiario;
+                $slchorario.value = result.horario;
+                $totalf.value = result.totalFaltas;
+
+            })
+            .catch(err => {
+                let message = err.statusText || "Ocurrio un error";
+                console.log(`error ${err.status}: ${message}`);
+            })
+    } else {
+        $titulo.textContent = `Agregar Empleado`;
+    }
+</script>

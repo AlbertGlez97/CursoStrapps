@@ -15,12 +15,23 @@ namespace Empleado.WebApi.Controllers
         public static List<Models.Empleado> listEmpleados = new List<Models.Empleado>()
         {
             new Models.Empleado(){
-                idEmpleado = 1,
-                nombre = "Alberto",
-                apellidoPaterno = "PEREZ",
-                apellidoMaterno= "PEREZ",
-                sexo = 'M',
-                activo = true
+            idEmpleado = 1,
+            puesto= "Soporte Tecnico",
+            rfc= "46d5fthdht645",
+            fechaIngreso= null,
+            salarioDiario= "526",
+            nss= "5d4g6sgs",
+            horario= null,
+            totalFaltas= 5,
+            activo= true,
+            nombre= "Alberto",
+            apellidoPaterno= "GONZALEZ",
+            apellidoMaterno= "DE LA CRUZ",
+            sexo='M',
+            curp= "SAEFOBUJASFEHOIUASEFL",
+            telefono= "556688522154",
+            correo= "ALFA91.3@HOTMAIL.COM",
+            nacionalidad= "MEXICANA"
             },
             new Models.Empleado(){
                 idEmpleado = 2,
@@ -56,7 +67,8 @@ namespace Empleado.WebApi.Controllers
 
             foreach (var empleado in lista)
             {
-                if(empleado.activo == true){
+                if (empleado.activo == true)
+                {
 
                     listaEmpleadosActivos.Add(empleado);
 
@@ -77,14 +89,16 @@ namespace Empleado.WebApi.Controllers
             {
                 if (iEmpleado.idEmpleado == id)
                 {
-                    empleadoEncontrado = iEmpleado; 
+                    empleadoEncontrado = iEmpleado;
                     break;
                 }
             }
-            if (empleadoEncontrado ==  null)
+            if (empleadoEncontrado == null)
             {
                 return NotFound();
-            }else{
+            }
+            else
+            {
                 return empleadoEncontrado;
             }
 
@@ -92,21 +106,23 @@ namespace Empleado.WebApi.Controllers
 
 
         [HttpPost]
-        public Models.Empleado Crear(Models.Empleado empleado) {
-            
+        public Models.Empleado Crear(Models.Empleado empleado)
+        {
+
             Models.Empleado ultiEmpleado = listEmpleados.Last();
-            
+
             // aumentamos en uno el id del nuevo empleado
             // dependiendo en que id se quedo el ultimo registro
             empleado.idEmpleado = ultiEmpleado.idEmpleado + 1;
-            
+
             listEmpleados.Add(empleado);
-            
+
             return empleado;
         }
 
         [HttpPut]
-        public async Task<ActionResult<Models.Empleado>> Actualizar(Models.Empleado empleado){
+        public async Task<ActionResult<Models.Empleado>> Actualizar(Models.Empleado empleado)
+        {
 
             Models.Empleado empleadoModificar = null;
 
@@ -134,7 +150,8 @@ namespace Empleado.WebApi.Controllers
             if (empleadoModificar == null)
             {
                 return NotFound();
-            }else
+            }
+            else
             {
                 empleadoModificar.nombre = empleado.nombre;
                 empleadoModificar.apellidoPaterno = empleado.apellidoPaterno;
@@ -148,7 +165,8 @@ namespace Empleado.WebApi.Controllers
 
         // eliminar
         [HttpDelete("{idEmpleado}")]
-        public async Task<ActionResult<Models.Empleado>> eliminar( int idEmpleado ){
+        public async Task<ActionResult<Models.Empleado>> eliminar(int idEmpleado)
+        {
 
             Models.Empleado empleadoEliminar = null;
 
@@ -170,7 +188,8 @@ namespace Empleado.WebApi.Controllers
                 return NotFound();
             }
 
-            if(empleadoEliminar != null){
+            if (empleadoEliminar != null)
+            {
                 empleadoEliminar.activo = false;
             }
 
