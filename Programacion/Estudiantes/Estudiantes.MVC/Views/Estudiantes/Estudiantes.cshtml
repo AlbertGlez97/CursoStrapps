@@ -1,0 +1,280 @@
+﻿<html>
+<head>
+    <title>estudiante - Editar</title>
+</head>
+<body>
+    <h1 id="titulo"></h1>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
+
+    <fieldset>
+        <legend>Información básica</legend>
+        <hr color="blue" size=4>
+        <table id="datos">
+            <tr>
+                <td><label for="nombre">Nombre: </label></td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+
+                <td><label for="apellidop">Apellido Paterno: </label></td>
+                <td><input type="text" name="paterno" id="paterno"></td>
+
+                <td><label for="apellidom">Apellido Materno: </label></td>
+                <td><input type="text" name="materno" id="materno"></td>
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos personales</legend>
+        <hr color="blue" size=4>
+        <table>
+            <tr>
+                <td><label for="sexo">Sexo:</label></td>
+                <td>
+                    <select id="slcsexo" name="slcsexo">
+                        <option value="seleccionasexo" selected="selected">- Selecciona -</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </td>
+
+                <td><label for="curp">CURP:</label></td>
+                <td><input type="text" name="curp" id="curp" maxlength="18"></td>
+
+                <td><label for="fechanacimiento">Fecha de nacimiento:</label></td>
+                <td><input type="date" name="nacimiento" id="nacimiento" value=""></td>
+
+            </tr>
+            <tr>
+                <td><label for="nacionalidad">Nacionalidad:</label></td>
+                <td>
+                    <select name="slcnacionalidad" id="slcnacionalidad">
+                        <option value="seleccionaN" selected="selected">- Selecciona -</option>
+                        <option value="Mexicana">Mexicana</option>
+                        <option value="Extranjera">Extranjera</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos de Contacto</legend>
+        <hr color="blue" size=4>
+        <table>
+            <tr>
+                <td><label for="telefono">Telefono:</label></td>
+                <td><input type="text" name="telefono" id="telefono"></td>
+                <td><label for="correo">Correo Electronico:</label></td>
+                <td><input type="text" name="correo" id="correo"></td>
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Domicilio</legend>
+        <hr color="blue" size=4>
+        <table>
+            <tr>
+                <td><label for="calle">Calle:</label></td>
+                <td><input type="text" name="calle" id="calle"></td>
+
+                <td><label for="numeroi">Numero interior:</label></td>
+                <td><input type="text" name="numeroi" id="numeroi"></td>
+
+                <td><label for="numeroe">Numero exterior:</label></td>
+                <td><input type="text" name="numeroe" id="numeroe"></td>
+            </tr>
+            <tr>
+                <td><label for="colonia">Colonia:</label></td>
+                <td><input type="text" name="colonia" id="colonia"></td>
+
+                <td><label for="municipio">Municipio:</label></td>
+                <td><input type="text" name="municipio" id="municipio"></td>
+
+                <td><label for="estado">Estado:</label></td>
+                <td>
+                    <select name="slcestado" id="slcestado">
+                        <option value="seleccionaN" selected="selected">- Selecciona -</option>
+                        <option value="Aguas Calientes">Aguas Calientes</option>
+                        <option value="Baja California Norte">Baja California Norte</option>
+                        <option value="Baja California Sur">Baja California Sur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cp">Codigo Postal:</label></td>
+                <td><input type="text" name="cp" id="cp"></input></td>
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Datos Escolares</legend>
+        <hr color="blue" size=4>
+        <table>
+            <tr>
+                <td><label for="matricula">Num. matricula:</label></td>
+                <td><input type="number" name="matricula" id="matricula"></td>
+
+                <td><label for="carrera">Carrera:</label></td>
+                <td><input type="text" name="carrera" id="carrera"></td>
+
+                <td><label for="fechaIngreso">Fecha Ingreso:</label></td>
+                <td><input type="date" name="fechaIngreso" id="fechaIngreso"></td>
+            </tr>
+            <tr>
+                <td><label for="semestre">Semestre:</label></td>
+                <td>
+                    <select name="semestre" id="slcsemestre">
+                        <option value="selecciona" selected="selected">- Selecciona -</option>
+                        <option value="1er Semestre">1er Semestre</option>
+                        <option value="2do Semestre">2do Semestre</option>
+                        <option value="3er Semestre">3er Semestre</option>
+                        <option value="4to Semestre">4to Semestre</option>
+                        <option value="5to Semestre">5to Semestre</option>
+                        <option value="6to Semestre">6to Semestre</option>
+                        <option value="7mo Semestre">7mo Semestre</option>
+                    </select>
+                </td>
+
+            </tr>
+        </table>
+        <br><br>
+    </fieldset>
+
+    <form class="formularioMateriasCursando">
+        <fieldset>
+            <legend>Materias cursando</legend>
+            <hr color="blue" size=4>
+            <table id="tablaMateriasCursando" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>
+                            Clave
+                        </th>
+                        <th>
+                            Materia
+                        </th>
+                        <th>
+                            Horario
+                        </th>
+                        <th>
+                            Cal. 1er Bim
+                        </th>
+                        <th>
+                            Cal. 2do Bim
+                        </th>
+                        <th>
+                            Cal. 3cer Bim
+                        </th>
+                        <th colspan="2">
+                            Acciones
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="clave" class="clave"></td>
+                        <td><input type="text" name="materia" class="materia"></td>
+                        <td><input type="text" name="horario" class="horario"></td>
+                        <td><input type="number" step=".01" name="primerCalificacion" class="primerCalificacion"></td>
+                        <td><input type="number" step=".01" name="segundaCalificacion" class="segundaCalificacion"></td>
+                        <td><input type="number" step=".01" name="tercerCalificacion" class="tercerCalificacion"></td>
+                        <td><input type="hidden" name="id"></td>
+                        <td><input type="submit" value="Enviar"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </fieldset>
+    </form>
+
+    <template id="templateMateriasCursadas">
+        <tr>
+            <td class="clave"></td>
+            <td class="materia"></td>
+            <td class="calificacionPrimera"></td>
+            <td class="calificacionSegunda"></td>
+            <td class="calificacionTercera"></td>
+            <td class="calificacionFinal"></td>
+            <td><a href="" class="editarMaterias">Editar|</a></td>
+            <td><a href="" class="eliminarMaterias">Eliminar</a></td>
+        </tr>
+    </template>
+
+    <template id="templateMateriasCursando">
+        <tr>
+            <td class="clave"></td>
+            <td class="materia"></td>
+            <td class="horario"></td>
+            <td class="primerCalificacion"></td>
+            <td class="segundaCalificacion"></td>
+            <td class="tercerCalificacion"></td>
+            <td><a href="" class="editar">Editar|</a></td>
+            <td><a href="" class="eliminar">Eliminar</a></td>
+        </tr>
+    </template>
+
+    <form class="formularioMateriasCursadas">
+        <fieldset>
+            <legend>Materias cursadas</legend>
+            <hr color="blue" size=4>
+            <table id="tablaMateriasCursadas" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>
+                            Clave
+                        </th>
+                        <th>
+                            Materia
+                        </th>
+                        <th>
+                            Cal. 1er Bim
+                        </th>
+                        <th>
+                            Cal. 2do Bim
+                        </th>
+                        <th>
+                            Cal. 3cer Bim
+                        </th>
+                        <th>
+                            Cal. Final
+                        </th>
+                        <th colspan="2">
+                            Acciones
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="clave" class="clave"></td>
+                        <td><input type="text" name="materia" class="materia"></td>
+                        <td><input type="number" step=".01" name="calificacionPrimera" class="calificacionPrimera"></td>
+                        <td><input type="number" step=".01" name="calificacionSegunda" class="calificacionSegunda"></td>
+                        <td><input type="number" step=".01" name="calificacionTercera" class="calificacionTercera"></td>
+                        <td><input type="number" step=".01" name="calificacionFinal" class="calificacionFinal"></td>
+                        <td><input type="hidden" name="id"></td>
+                        <td><input type="submit" value="Enviar"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </fieldset>
+    </form>
+
+    
+
+    <button class="bttnGuardar">Guardar</button>
+    <button class="bttnCerrar" type="button" onclick="window.location.href='/Estudiantes/Listado'">Cerrar</button>
+
+    <script type="module" src="~/js/estudiante.js" asp-append-version="true"></script>
+</body>
+</html>

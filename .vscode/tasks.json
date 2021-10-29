@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Programacion/CAPITULO 2/01-Problema 2.1/01-Problema 2.1.csproj",
+                "${workspaceFolder}/Programacion/Proyecto/Empleado.WebAPI/Empleado.WebAPI.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Programacion/CAPITULO 2/01-Problema 2.1/01-Problema 2.1.csproj",
+                "${workspaceFolder}/Programacion/Proyecto/Empleado.WebAPI/Empleado.WebAPI.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/Programacion/CAPITULO 2/01-Problema 2.1/01-Problema 2.1.csproj",
+                "${workspaceFolder}/Programacion/Proyecto/Empleado.WebAPI/Empleado.WebAPI.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace Empleado.WebApi
+namespace Empleado.WebAPI
 {
     public class Startup
     {
@@ -27,20 +27,21 @@ namespace Empleado.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options =>{
+                options.AddPolicy(name: "Mycors", builder => {
+                    // builder.WithOrigins("https://localhost:5001");
+                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+                            .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Empleado.WebApi", Version = "v1" });
             });
 
-            services.AddCors(options =>{
-                options.AddPolicy(name: "Mycors", builder => {
-                    // builder.WithOrigins("https://localhost:5001");
-                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
-                           .AllowAnyHeader().AllowAnyMethod();
-                });
-            });
-
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

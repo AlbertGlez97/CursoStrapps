@@ -24,11 +24,15 @@ namespace Empleado.MVC.Controllers
         }
         public IActionResult Registro()
         {
-            return View();
+            return View("Empleado");
         }
         public IActionResult Editar()
         {
-            return View();
+            return View("Empleado");
+        }
+        public IActionResult Consultar()
+        {
+            return View("Empleado");
         }
     }
 }

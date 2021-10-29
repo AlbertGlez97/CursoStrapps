@@ -1,19 +1,18 @@
 using System;
-
-namespace Empleado.WebApi.Models
+namespace Empleado.WebAPI.Models
 {
     public class Persona
     {
         public int idPersona { get; set; }
-        public string nombre { get; set; }
-        public string apellidoPaterno { get; set; }
-        public string apellidoMaterno { get; set; }
-        public char sexo { get; set; }
-        public string curp { get; set; }
-        public string telefono { get; set; }
-        public string correo { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public string nacionalidad { get; set; }
+        public string Nombre { get; set; }
+        public string ApellidoPaterno { get; set; }
+        public string ApellidoMaterno { get; set; }
+        public char Sexo { get; set; }
+        public string CURP { get; set; }
+        public string Telefono { get; set; }
+        public string CorreoElectronico { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public string Nacionalidad { get; set; }
         public Direccion direccion { get; set; }
     }
 }

@@ -46,3 +46,15 @@ END
 GO
 
 SELECT *, dbo.calcularEdad(fechaNacimineto) AS edad FROM Persona
+
+-- Procediminetos Almacenados 
+
+CREATE PROCEDURE SP_PERSONA_INSERT
+
+
+-- Para Insertar Datos en Indentity
+SET IDENTITY_INSERT Persons ON
+GO
+
+-- Insertar Datos en una tabla con Identity
+INSERT INTO Persons()
