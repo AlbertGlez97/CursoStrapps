@@ -1,0 +1,35 @@
+<!-- La mayoría de aplicaciones de diseño gráfico permiten añadir una sombra (llamada drop shadow en inglés) 
+a las imágenes. CSS no incluye propiedades que permitan mostrar de forma sencilla sombras en los elementos.
+
+No obstante, existen varias técnicas sencillas y otras más avanzadas que permiten crear sombras que se
+ adapten a cualquier imagen o elemento. A continuación se muestra una técnica sencilla para añadir sombra a las imágenes. -->
+
+ <html>
+     <head>
+         <title>8.2.1 Sombra(drop shadow)</title>
+         <link rel="stylesheet" href="Sombra.css">
+     </head>
+     <body>
+        <div class="dropshadow">
+            <div class="innerbox">
+              <img src="Ejercicio 9/imagen.png" alt="Imagen genérica" />
+            </div>
+            </div>
+            
+            <div class="dropshadow">
+            <div class="innerbox">
+              <h4>Párrafo de texto</h4>
+              <p>Esta técnica no sólo permite añadir sombra a las imágenes, sino a cualquier elemento.</p>
+            </div>
+            </div>
+     </body>
+ </html>
+
+ <!-- consiste en la utilización de un par de elementos <div> alrededor del elemento que va a mostrar una sombra.
+      La sombra se consigue mediante una imagen muy grande que contiene una sombra orientada hacia el lado derecho 
+      e inferior.
+
+    La ventaja de este método es que es sencillo y solamente requiere añadir un par de <div> por cada elemento. 
+        Además, como la sombra es una imagen muy grande, el efecto funciona con elementos de cualquier tamaño.
+     -->
+    

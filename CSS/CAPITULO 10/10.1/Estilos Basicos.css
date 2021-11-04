@@ -1,0 +1,10 @@
+.normal {
+    width: 250px;
+    /* el border: 1px se ocupa solo, para poner cuadritos dentro del cuadro*/
+    border: 1px solid #000;
+    /*si agregamos el border-collapse se quitan los cuadritos y solo usa el cuadro normal*/
+    border-collapse: collapse;
+  }
+  .normal th, .normal td {
+    border: 1px solid #000;
+  }

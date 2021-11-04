@@ -1,0 +1,27 @@
+<!-- Para mostrar un formulario tal y como aparece en la imagen anterior no es necesario crear una tabla y controlar 
+la anchura de sus columnas para conseguir una alineación perfecta. Sin embargo, sí que es necesario añadir un nuevo 
+elemento (por ejemplo un <div>) que encierre a cada uno de los campos del formulario (<label> y <input>). -->
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="Etiquetaslabelcondiv.css">
+    </head>
+    <body>
+        <form>
+            <fieldset>
+            <legend>Alta en el servicio</legend>
+          
+            <div>
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" />
+            </div>
+          
+            <div>
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" size="35" />
+            </div>
+            ...
+          </fieldset>
+          </form>
+    </body>
+</html>

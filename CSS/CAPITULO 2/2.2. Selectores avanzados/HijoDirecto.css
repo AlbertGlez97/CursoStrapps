@@ -1,0 +1,5 @@
+p > span { color: blue; }
+
+
+p a { color: red; }
+p > a { color:red; }

@@ -1,0 +1,22 @@
+<!-- En ocasiones, puede resultar útil incluir un pequeño icono al lado de un enlace para indicar el tipo de contenido que 
+enlaza,como por ejemplo un archivo comprimido o un documento con formato PDF.
+
+Este tipo de imágenes son puramente decorativas en vez de imágenes de contenido, por lo que se deberían añadir con CSS
+ y no con elementos de tipo <img>. Utilizando la propiedad background (y background-image) se puede personalizar el 
+ aspecto de los enlaces para que incluyan un pequeño icono a su lado. -->
+
+ <html>
+     <head>
+         <title>7.2.2. Imágenes según el tipo de enlace</title>
+         <link rel="stylesheet" href="ImagenesSegunElTipoDeEnlace.css">
+     </head>
+     <body>
+        <a href="#">Enlace con el estilo por defecto</a>
+
+        <a class="rss" href="#">Enlace a un archivo RSS</a>
+        
+        <a class="pdf" href="#">Enlace a un documento PDF</a>
+     </body>
+ </html>
+
+ <!-- El siguiente ejemplo personaliza el aspecto de dos enlaces añadiéndoles una imagen de fondo: -->

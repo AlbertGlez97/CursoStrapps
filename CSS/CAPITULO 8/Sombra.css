@@ -1,0 +1,18 @@
+.dropshadow {
+    float:left;
+    clear:left;
+    background: url(imagen/shadowAlpha.png) no-repeat bottom right !important;
+    background: url(imagenes/shadow.gif) no-repeat bottom right;
+    margin: 10px 0 10px 10px !important;
+    margin: 10px 0 10px 5px;
+    padding: 0px;
+  }
+
+  .innerbox {
+    position:relative;
+    bottom:6px;
+    right: 6px;
+    border: 1px solid #999999;
+    padding:4px;
+    margin: 0px 0px 0px 0px;
+  }

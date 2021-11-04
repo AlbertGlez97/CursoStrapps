@@ -1,0 +1,24 @@
+#caja1 {
+  background-image: url("help.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+#caja2 {
+  background-image: url("help.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#caja3 {
+  background-image: url("help.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+
+.wide #content-secondary {
+  width: 272px;
+  margin: 13px 0 0 0;
+  position: relative;
+  margin-left: -8px;
+  background: url("help.png") repeat-y;
+}

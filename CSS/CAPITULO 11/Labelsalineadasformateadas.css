@@ -1,0 +1,14 @@
+/* En primer lugar, se muestran los elementos <label> como elementos de bloque, para que añadan una separación para 
+cada campo del formulario. Además, se añade un margen superior para no mostrar juntas todas las filas del formulario: */
+label{
+    display: block;
+    margin: .5em 0 0 0;
+}
+
+/* El botón del formulario también se muestra como un elemento de bloque y se le añade un margen para darle el 
+aspecto final deseado: */
+
+.btn {
+  display: block;
+  margin: 1em 0;
+}

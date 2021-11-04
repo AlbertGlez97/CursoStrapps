@@ -1,0 +1,53 @@
+<!--1: El siguiente ejemplo carga la hoja de estilos 
+    basico_ie.css solamente para los navegadores de tipo Internet Explorer: -->
+
+<!--[if IE]>
+  <style type="text/css">
+    @import ("basico_ie.css");
+  </style>
+<![endif]-->
+
+<!--2: El filtro [if IE] indica que esos estilos CSS sólo deben tenerse en cuenta 
+si el navegador es cualquier versión de Internet Explorer. Utilizando comentarios condicionales,
+ también es posible incluir reglas CSS para versiones específicas de Internet Explorer:-->
+
+ <!--[if gte IE 6]>
+  <style type="text/css">
+    @import ("basico_ie6.css");
+  </style>
+<![endif]-->
+
+<!--[if gt IE 7]>
+  Mayor que Internet Explorer 7
+<![endif]-->
+
+<!--[if gte IE 7]>
+  Mayor o igual que Internet Explorer 7
+<![endif]-->
+
+<!--[if lt IE 8]>
+  Menor que Internet Explorer 8
+<![endif]-->
+
+<!--[if lte IE 7]>
+  Igual o menor que Internet Explorer 7
+<![endif]-->
+<html>
+ <head> <title> Hacks </title>
+        <link rel="stylesheet" href="hacks.css">
+</head>
+
+ <body>
+     <div>
+         <p> esto esta dentro del div</p>
+         <p> esto tambien </p>
+     </div>
+     
+     <menu>
+        <li>primer elemento </li>
+        <li>segundo elemento </li>
+        <li>tercer elemento </li>
+       </menu>
+ </body>
+</html>
+

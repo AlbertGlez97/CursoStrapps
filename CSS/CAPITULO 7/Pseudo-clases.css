@@ -1,0 +1,46 @@
+a { margin: 1em 0; display: block;}
+
+a:hover{ text-decoration: none; }
+
+.alternativo {color: #CC0000;}
+.importante {font-weight: bold; font-size: 1.3em;}
+.raro {text-decoration:overline;}
+
+
+/* Las pseudo-clases siempre incluyen dos puntos (:) por delante de su nombre y siempre se añaden a 
+continuación del elemento al que se aplican, sin dejar ningún espacio en blanco por delante:
+
+/* Incorrecto: el nombre de la pseudo-clase no se puede separar de los dos puntos iniciales 
+a: visited { ... }
+
+/* Incorrecto: la pseudo-clase siempre se añade a continuación del elemento al que modifica 
+a :visited { ... }
+
+/* Correcto: la pseudo-clase modifica el comportamiento del elemento <a> 
+a:visited { ... } */
+
+/* Las pseudo-clases también se pueden combinar con cualquier otro selector complejo:
+
+a.importante:visited { ... }
+a#principal:hover { ... }
+div#menu ul li a.primero:active { ... } */
+
+/* De hecho, en muchas hojas de estilos es habitual establecer los estilos de los enlaces de la siguiente forma:
+
+a:link, a:visited {
+  ...
+}
+
+a:hover, a:active {
+  ...
+} */
+
+/* También es posible combinar en un mismo elemento las pseudo-clases que son compatibles entre sí:
+
+/* Los estilos se aplican cuando el usuario pasa el ratón por encima de un
+   enlace que todavía no ha visitado 
+a:link:hover { ... }
+
+/* Los estilos se aplican cuando el usuario pasa el ratón por encima de un
+   enlace que ha visitado previamente 
+a:visited:hover { ... } */

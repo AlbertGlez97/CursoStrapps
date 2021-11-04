@@ -1,0 +1,13 @@
+body{
+    margin: 0px;
+}
+div{
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+h1{
+    padding: 2em
+
+}

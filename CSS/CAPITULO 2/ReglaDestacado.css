@@ -1,0 +1,25 @@
+
+.destacado { color: red; }
+
+.aviso {
+    padding: 0.5em;
+    border: 1px solid #98be10;
+    background: #f6feda;
+  }
+  
+  .error {
+    color: #930;
+    font-weight: bold;
+  }
+   /* Todos los elementos de tipo "p" con atributo class="aviso" 
+p.aviso { ... }*/
+
+/* Todos los elementos con atributo class="aviso" que estén dentro
+   de cualquier elemento de tipo "p" 
+p .aviso { ... }*/
+
+/* Todos los elementos "p" de la página y todos los elementos con
+   atributo class="aviso" de la página 
+p, .aviso { ... }*/
+  p.destacado { color: red }
+

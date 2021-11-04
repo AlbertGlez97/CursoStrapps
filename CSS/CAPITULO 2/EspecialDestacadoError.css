@@ -1,0 +1,28 @@
+/* .error { color: red; }
+.destacado { font-size: 15px; }
+.especial  { font-weight: bold; } */
+
+
+/* .error { color: red; }
+.error.destacado { color: blue; }
+.destacado { font-size: 15px; }
+.especial  { font-weight: bold; } */
+
+
+#destacado { color: red; }
+
+
+/*No debe confundirse el selector de ID con los selectores anteriores:
+
+/* Todos los elementos de tipo "p" con atributo id="aviso" 
+p#aviso { ... }
+
+/* Todos los elementos con atributo id="aviso" que estén dentro
+	de cualquier elemento de tipo "p" 
+p #aviso { ... }
+
+/* Todos los elementos "p" de la página y todos los elementos con
+	atributo id="aviso" de la página 
+p, #aviso { ... }*/
+
+p#aviso { color: blue; }

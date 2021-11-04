@@ -1,0 +1,17 @@
+#destacada {
+    width: 250px;
+    height: 250px;
+  }
+  
+  img{
+    border: none;
+  }
+
+  /* 8.1.2. Eliminar el borde de las imágenes con enlaces
+Cuando una imagen forma parte de un enlace, los navegadores muestran por defecto un borde azul 
+grueso alrededor de las imágenes. Por tanto, una de las reglas más utilizadas en los archivos CSS es la que 
+elimina los bordes de las imágenes con enlaces:
+
+img {
+  border: none;
+} */

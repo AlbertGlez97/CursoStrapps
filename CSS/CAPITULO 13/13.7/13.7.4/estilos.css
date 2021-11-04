@@ -1,0 +1,4 @@
+@import url("basico.css") screen;
+@import url("seccion.css") screen;
+@import url("impresora.css") print;
+@import url("movil.css") handheld;

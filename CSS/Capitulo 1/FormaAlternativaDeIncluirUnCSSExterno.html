@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Ejemplo de estilos CSS en un archivo externo</title>
+
+        <style type="text/css" media="screen">
+        @import '/css/estilos.css';
+        </style>
+    </head>
+
+    <body>
+        <p>Un párrafo de texto.</p>
+    </body>
+</html>
+
+
+<!-- La URL del archivo CSS externo se indica 
+mediante una cadena de texto encerrada con 
+comillas simples o dobles o mediante la 
+palabra reservada url(). De esta forma, las 
+siguientes reglas @import son equivalentes:
+
+@import '/css/estilos.css';
+@import "/css/estilos.css";
+@import url('/css/estilos.css');
+@import url("/css/estilos.css"); -->

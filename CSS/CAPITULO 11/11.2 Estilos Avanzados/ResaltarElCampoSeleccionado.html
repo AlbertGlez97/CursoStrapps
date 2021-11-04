@@ -1,0 +1,35 @@
+<!-- Una de las mejoras más útiles para los formularios HTML consiste en resaltar de alguna forma especial el campo en el que el 
+usuario está introduciendo datos. Para ello, CSS define la pseudo-clase :focus, que permite aplicar estilos especiales al
+ elemento que en ese momento tiene el foco o atención del usuario.
+
+La siguiente imagen muestra un formulario que resalta claramente el campo en el que el usuario está introduciendo la
+ información: -->
+<html>
+         <head>
+             <title>11.2.2. Resaltar el campo seleccionado</title>
+             <link rel="stylesheet" href="ResaltarCampoSeleccionado.css">
+         </head>
+         <body>
+            <form>
+                <fieldset>
+                  <legend>Alta en el servicio</legend>
+                
+                 
+
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" />
+                
+                  <label for="apellidos">Apellidos</label>
+                  <input type="text" id="apellidos" size="50" />
+                
+                  <label for="dni">DNI</label>
+                  <input type="text" id="dni" size="10" maxlength="9" />
+                
+                  <label for="contrasena">Contraseña</label>
+                  <input type="password" id="contrasena" />
+                
+                  <input class="btn" type="submit" value="Darme de alta" />
+                </fieldset>
+                </form>
+        </body>
+    </html>

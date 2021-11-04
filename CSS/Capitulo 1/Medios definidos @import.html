@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Ejemplo de estilos CSS en un archivo externo</title>
+
+               <link rel="stylesheet" type="text/css" media="screen" href="MediosCSS.css" />
+      
+    </head>
+
+    <body>
+        <p>Hola Strapps</p>
+    </body>
+</html>
+
+<br>
+<html>
+    <head>
+        <title>Ejemplo de estilos CSS en un archivo externo</title>
+
+        <style type="text/css" media="screen">
+               @import url("MediosCSS.css") screen; -->
+        <!-- @import url("estilos_impresora.css") print;
+
+            /* Los medios más utilizados actualmente son screen (para definir el aspecto de la página en pantalla) y print 
+            (para definir el aspecto de la página cuando se imprime), seguidos de handheld (que define el aspecto de la 
+            página cuando se visualiza mediante un dispositivo móvil). */
+        </style>
+    </head>
+
+    <body>
+        <p>Hola Strapps</p>
+    </body>
+</html>
+
+<br>
+
+<html>
+    <link rel="stylesheet" type="text/css"  media="screen" href="MediosCSS.css" />
+
+    <style type="text/css" media="screen">
+@import url("MediosCSS.css") screen;
+@media print {
+  /* Estilos específicos para impresora */
+}
+</style>
+
+<body>
+    <p>Hola Strapps</p>
+</body>
+
+</html>

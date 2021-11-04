@@ -1,0 +1,14 @@
+/* El ejemplo establece que el tamaño de letra de la página cuando se 
+visualiza en una pantalla debe ser 13 píxel.
+ Sin embargo, cuando se imprimen los contenidos 
+ de la página, su tamaño de letra debe ser de 10 puntos. */
+
+@media print {
+    body { font-size: 10pt }
+  }
+  @media screen {
+    body { font-size: 45px }
+  }
+  @media screen, print {
+    body { line-height: 1.2 }
+  }

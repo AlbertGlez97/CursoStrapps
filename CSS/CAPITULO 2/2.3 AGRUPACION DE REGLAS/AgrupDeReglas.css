@@ -1,0 +1,22 @@
+h1 { color: red; }
+
+h1 { font-size: 2em; }
+
+h1 { font-family: Verdana; }
+
+h1 {
+    color: red;
+    font-size: 2em;
+    font-family: Verdana;
+  }
+
+
+  /* El ejemplo anterior tiene el mismo efecto que las tres reglas anteriores, pero es más eficiente y 
+  es más fácil de modificar y mantener por parte de los diseñadores. Como CSS ignora los espacios en blanco y
+   las nuevas líneas, también se pueden agrupar las reglas de la siguiente forma:
+
+h1 { color: red; font-size: 2em; font-family: Verdana; }
+Si se quiere reducir al máximo el tamaño del archivo CSS para mejorar ligeramente el tiempo de carga de 
+la página web, también es posible indicar la regla anterior de la siguiente forma:
+
+h1 {color:red;font-size:2em;font-family:Verdana;} */
