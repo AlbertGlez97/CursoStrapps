@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructuras de control de flujo</title>
+  </head>
+  <script>
+    //Ejercicio 5
+    var numero1 = 5;
+    var numero2 = 8;
+
+    if (numero1 < numero2) {
+      //alert("numero1 no es mayor que numero2");
+    }
+    if (0 <= numero2) {
+      //alert("numero2 es positivo");
+    }
+    if (0 < numero1 || 0 != numero1) {
+      //alert("numero1 es negativo o distinto de cero");
+    }
+
+    if (++numero1 < numero2) {
+      //alert("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+    }
+
+    //Ejercicio 6
+    var letras = [
+      "T",
+      "R",
+      "W",
+      "A",
+      "G",
+      "M",
+      "Y",
+      "F",
+      "P",
+      "D",
+      "X",
+      "B",
+      "N",
+      "J",
+      "Z",
+      "S",
+      "Q",
+      "V",
+      "H",
+      "L",
+      "C",
+      "K",
+      "E",
+      "T",
+    ];
+
+    //1- Calcular letra del DNI, obtener el resto de la divison entera del numero DNI y el número 23, pedido por el usuario
+
+    //2 Almacene en una variable el número de DNI indicado por el usuario y en otra variable la letra del DNI que se ha indicado
+    var numero = prompt("Introduce tu número de DNI (sin la letra)");
+    var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+    letra = letra.toUpperCase();
+
+    //3 Comprobar si el número es menor que 0 o mayor que 99999999
+    if (numero > 0 && numero < 99999999) {
+      //3.1 Si es valido,se calcula la letra que le corresponde con el metodo indicado
+      var dni = numero % letras.length;
+      console.log(dni);
+
+      if (letra === letras[dni]) {
+        alert(`El número ${numero} y la letra ${letra} de DNI son correctos`);
+      } else {
+        alert(`La letra que has ingresado ${letra} no es correcta`);
+      }
+
+    } else {
+      //3.1 Si no es valido informarle al usuario
+      alert(`El numero ingresado no es valido`);
+    }
+
+
+    //Ejercicio 7
+    //Calcular Factorial  de un numero pedido por el usuario 5! = 5 x 4 x 3 x 2 x 1 = 120
+    var numeroFactor = prompt("Introduce tu número");
+    var factorial = 1;
+    if(numeroFactor > 0)
+    {
+        for(var i=1; i <= numeroFactor; i++)
+        {
+            factorial *= i; 
+        }
+
+        alert(factorial);
+    }else{
+        console.log("Tu numero no es valido")
+    }
+  </script>
+  <body></body>
+</html>

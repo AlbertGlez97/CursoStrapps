@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones y propiedades básicas de JavaScript</title>
+  </head>
+  <body>
+    <h1>Funciones y propiedades básicas de JavaScript</h1>
+  </body>
+  <script>
+    var mensaje = "Hola Mundo";
+
+    var numeroLetras = mensaje.length; // numeroLetras = 10
+
+    //substring(inicio, final), extrae una porción de una cadena de texto. El segundo parámetro es opcional. Si sólo se indica el parámetro inicio, la función devuelve la parte de la cadena original correspondiente desde esa posición hasta el final
+    var porcion = mensaje.substring(1, 8); // porcion = "ola Mun"
+    porcion = mensaje.substring(3, 4); // porcion = "a"
+
+    //Además del operador +, también se puede utilizar la función concat()
+    var mensaje1 = "Hola";
+    var mensaje2 = mensaje1.concat(" Mundo"); // mensaje2 = "Hola Mundo"
+
+    //toUpperCase(), transforma todos los caracteres de la cadena a sus correspondientes caracteres en mayúsculas:
+    var mensaje2 = mensaje1.toUpperCase(); // mensaje2 = "HOLA"
+
+    //toLowerCase(), transforma todos los caracteres de la cadena a sus correspondientes caracteres en minúsculas:
+    var mensaje2 = mensaje1.toLowerCase(); // mensaje2 = "hola"
+
+    //charAt(posicion), obtiene el carácter que se encuentra en la posición indicada
+    var letra = mensaje.charAt(0); // letra = H
+    letra = mensaje.charAt(2); // letra = l
+
+    //indexOf(caracter), calcula la posición en la que se encuentra el carácter indicado dentro de la cadena de texto
+    var posicion = mensaje.indexOf("a"); // posicion = 3
+    posicion = mensaje.indexOf("b"); // posicion = -1
+
+    //lastIndexOf(caracter), calcula la última posición en la que se encuentra el carácter indicado dentro de la cadena de texto.
+
+    var posicion = mensaje.lastIndexOf("a"); // posicion = 3
+    posicion = mensaje.lastIndexOf("b"); // posicion = -1
+
+    //split(separador), convierte una cadena de texto en un array de cadenas de texto. La función parte la cadena de texto determinando sus trozos a partir del carácter separador indicado:
+
+    var mensaje = "Hola Mundo, soy una cadena de texto!";
+    var palabras = mensaje.split(" "); // palabras = ["Hola", "Mundo,", "soy", "una", "cadena", "de", "texto!"];0
+
+    //Funciones útiles para arrays
+    //length, calcula el número de elementos de un array
+
+    var vocales = ["a", "e", "i", "o", "u"];
+    var numeroVocales = vocales.length; // numeroVocales = 5
+
+    //concat(), se emplea para concatenar los elementos de varios arrays
+
+    var array1 = [1, 2, 3];
+    array2 = array1.concat(4, 5, 6); // array2 = [1, 2, 3, 4, 5, 6]
+    array3 = array1.concat([4, 5, 6]); // array3 = [1, 2, 3, 4, 5, 6]
+
+    //join(separador), es la función contraria a split(). Une todos los elementos de un array para formar una cadena de texto. Para unir los elementos se utiliza el carácter separador indicado
+
+    var array = ["hola", "mundo"];
+    var mensaje = array.join(""); // mensaje = "holamundo"
+    mensaje = array.join(" "); // mensaje = "hola mundo"
+
+    //pop(), elimina el último elemento del array y lo devuelve. El array original se modifica y su longitud disminuye en 1 elemento.
+
+    var array = [1, 2, 3];
+    var ultimo = array.pop(); // ahora array = [1, 2], ultimo = 3
+
+    //push(), añade un elemento al final del array. El array original se modifica y aumenta su longitud en 1 elemento. (También es posible añadir más de un elemento a la vez)
+
+    var array = [1, 2, 3];
+    array.push(4); // ahora array = [1, 2, 3, 4]
+
+    //shift(), elimina el primer elemento del array y lo devuelve. El array original se ve modificado y su longitud disminuida en 1 elemento.
+
+    var array = [1, 2, 3];
+    var primero = array.shift(); // ahora array = [2, 3], primero = 1
+
+    //unshift(), añade un elemento al principio del array. El array original se modifica y aumenta su longitud en 1 elemento. (También es posible añadir más de un elemento a la vez)
+
+    var array = [1, 2, 3];
+    array.unshift(0); // ahora array = [0, 1, 2, 3]
+
+    //reverse(), modifica un array colocando sus elementos en el orden inverso a su posición original:
+
+    var array = [1, 2, 3];
+    array.reverse(); // ahora array = [3, 2, 1]
+
+    //3.5.3 Funciones útiles para números
+    //isNaN(), permite proteger a la aplicación de posibles valores numéricos no definidos
+
+    var numero1 = 0;
+    var numero2 = 0;
+    if (isNaN(numero1 / numero2)) {
+      alert("La división no está definida para los números indicados");
+    }
+
+    //Infinity, hace referencia a un valor numérico infinito y positivo (también existe el valor –Infinity para los infinitos negativos)
+
+    var numero1 = 10;
+    var numero2 = 0;
+    alert(numero1 / numero2); // se muestra el valor Infinity
+
+    //toFixed(digitos), devuelve el número original con tantos decimales como los indicados por el parámetro digitos y realiza los redondeos necesarios. Se trata de una función muy útil por ejemplo para mostrar precios.
+
+    var numero1 = 4564.34567;
+    numero1.toFixed(2); // 4564.35
+    numero1.toFixed(6); // 4564.345670
+    numero1.toFixed(); // 4564
+  </script>
+</html>

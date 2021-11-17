@@ -10,7 +10,6 @@ const arreglo = path.split("/");
 const accionURL = arreglo[2];
 var urlEstudiante = arreglo[3];
 
-
 document.addEventListener("DOMContentLoaded", (e) => {
 
     let accion = "";
