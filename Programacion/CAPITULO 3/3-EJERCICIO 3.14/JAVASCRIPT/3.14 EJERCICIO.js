@@ -10,7 +10,7 @@ if (Duracion != null){
     totalPagar (Duracion)
 }
 //Detectamos si el usuario NO ingreso un valor
-else {
+if (Duracion === null) {
 alert("No has ingresado una Duracion");
 }
 
