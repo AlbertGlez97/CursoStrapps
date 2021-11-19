@@ -1,0 +1,16 @@
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.csproj.AssemblyReference.cache
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.AssemblyInfoInputs.cache
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.AssemblyInfo.cs
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.csproj.CoreCompileInputs.cache
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.exe
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.deps.json
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.runtimeconfig.json
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.runtimeconfig.dev.json
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.dll
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\ref\EJERCICIO.dll
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\bin\Debug\net5.0\EJERCICIO.pdb
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.dll
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\ref\EJERCICIO.dll
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.pdb
+C:\Users\juan_\Documents\Verificar\CursoStrapp\Programacion\CAPITULO 3\6-EJERCICIO 3.18\PROGRAMACION\EJERCICIO\obj\Debug\net5.0\EJERCICIO.genruntimeconfig.cache

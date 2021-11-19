@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El valor mas Alto</title>
+  </head>
+  <body>
+    <h1>El valor mas Alto</h1>
+
+    <label for="">Ingresa A</label>
+    <input type="number" id="A" /> <br />
+    <label for="">Ingresa B</label>
+    <input type="number" id="B" /> <br />
+    <label for="">Ingresa C</label>
+    <input type="number" id="C" /> <br />
+    <button onclick="valor()">Obtener el Valor mas Alto</button> <br /> <br />
+    <span>El resultado es: </span> <span id="valorAlto"></span>
+
+    <script>
+      function valor() {
+        let A = document.getElementById("A").value;
+        let B = document.getElementById("B").value;
+        let C = document.getElementById("C").value;
+
+        let valorAlto = document.getElementById("valorAlto");
+        if (A > B) {
+          if (A > C) {
+            valorAlto.innerHTML = `La letra A con el valor: ${A} es mas grande`;
+            console.log(`La letra A con el valor: ${A} es mas grande `);
+          } else {
+            valorAlto.innerHTML = `La letra C con el valor: ${C} es mas grande `;
+            console.log(`La letra C con el valor: ${C} es mas grande `);
+          }
+        } else {
+          if (B > C) {
+            valorAlto.innerHTML = `La letra B con el valor: ${B} es mas grande `;
+            console.log(`La letra B con el valor: ${B} es mas grande `);
+          } else {
+            valorAlto.innerHTML = `La letra C con el valor: ${C} es mas grande `;
+            console.log(`La letra C con el valor: ${C} es mas grande `);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
