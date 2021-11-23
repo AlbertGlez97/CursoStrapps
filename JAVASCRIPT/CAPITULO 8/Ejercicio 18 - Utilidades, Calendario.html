@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Ejercicio 18 - Utilidades, Calendario</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="./Ejercicio 18 - Utilidades, Calendario_files/calendar-estilo.css"
+    />
+    <script
+      type="text/javascript"
+      src="./Ejercicio 18 - Utilidades, Calendario_files/calendar.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Ejercicio 18 - Utilidades, Calendario_files/calendar-es.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./Ejercicio 18 - Utilidades, Calendario_files/calendar-setup.js"
+    ></script>
+  </head>
+  <body>
+    <p></p>
+    <input type="hidden" name="fecha" id="fecha" />
+    <span
+      style="
+        background-color: rgb(255, 255, 204);
+        cursor: pointer;
+        padding: 0.3em;
+        border: thin solid rgb(255, 255, 0);
+        text-decoration: underline;
+        color: blue;
+      "
+      id="fecha_usuario"
+    >
+      Pincha aqu� para seleccionar la fecha
+    </span>
+    <script type="text/javascript">
+      Calendar.setup({
+        inputField: "fecha",
+        ifFormat: "%d/%m/%Y",
+        weekNumbers: false,
+        displayArea: "fecha_usuario",
+        daFormat: "%A, %d de %B de %Y",
+      });
+    </script>
+
+    <div
+      class="calendar"
+      style="position: absolute; display: none; left: 8px; top: 41px"
+    >
+      <table cellspacing="0" cellpadding="0" style="visibility: visible">
+        <thead>
+          <tr>
+            <td colspan="1" class="button"><div unselectable="on">?</div></td>
+            <td colspan="5" class="title" style="cursor: move">
+              Noviembre, 2021
+            </td>
+            <td colspan="1" class="button"><div unselectable="on">×</div></td>
+          </tr>
+          <tr class="headrow">
+            <td colspan="1" class="button nav">
+              <div unselectable="on">«</div>
+            </td>
+            <td colspan="1" class="button nav">
+              <div unselectable="on">‹</div>
+            </td>
+            <td colspan="3" class="button"><div unselectable="on">Hoy</div></td>
+            <td colspan="1" class="button nav">
+              <div unselectable="on">›</div>
+            </td>
+            <td colspan="1" class="button nav">
+              <div unselectable="on">»</div>
+            </td>
+          </tr>
+          <tr class="daynames">
+            <td class="day name">Lun</td>
+            <td class="day name">Mar</td>
+            <td class="day name">Mi�</td>
+            <td class="day name">Jue</td>
+            <td class="day name">Vie</td>
+            <td class="name day weekend">S�b</td>
+            <td class="name day weekend">Dom</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="daysrow">
+            <td class="day">1</td>
+            <td class="day">2</td>
+            <td class="day">3</td>
+            <td class="day">4</td>
+            <td class="day">5</td>
+            <td class="day weekend">6</td>
+            <td class="day weekend">7</td>
+          </tr>
+          <tr class="daysrow">
+            <td class="day">8</td>
+            <td class="day">9</td>
+            <td class="day">10</td>
+            <td class="day">11</td>
+            <td class="day">12</td>
+            <td class="day weekend">13</td>
+            <td class="day weekend">14</td>
+          </tr>
+          <tr class="daysrow">
+            <td class="day">15</td>
+            <td class="day selected today">16</td>
+            <td class="day">17</td>
+            <td class="day">18</td>
+            <td class="day">19</td>
+            <td class="day weekend">20</td>
+            <td class="day weekend">21</td>
+          </tr>
+          <tr class="daysrow">
+            <td class="day">22</td>
+            <td class="day">23</td>
+            <td class="day">24</td>
+            <td class="day">25</td>
+            <td class="day">26</td>
+            <td class="day weekend">27</td>
+            <td class="day weekend">28</td>
+          </tr>
+          <tr class="daysrow">
+            <td class="day">29</td>
+            <td class="day">30</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+          </tr>
+          <tr class="emptyrow">
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+            <td class="emptycell">&nbsp;</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="footrow">
+            <td colspan="7" class="ttip" style="cursor: move">
+              Seleccionar fecha
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="combo" style="display: none">
+        <div class="label">Ene</div>
+        <div class="label">Feb</div>
+        <div class="label">Mar</div>
+        <div class="label">Abr</div>
+        <div class="label">May</div>
+        <div class="label">Jun</div>
+        <div class="label">Jul</div>
+        <div class="label">Ago</div>
+        <div class="label">Sep</div>
+        <div class="label">Oct</div>
+        <div class="label">Nov</div>
+        <div class="label">Dic</div>
+      </div>
+      <div class="combo">
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+        <div class="label"></div>
+      </div>
+    </div>
+  </body>
+</html>

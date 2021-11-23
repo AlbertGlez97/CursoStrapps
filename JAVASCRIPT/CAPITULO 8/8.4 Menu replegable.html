@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Menu Replegable</title>
+
+<script type="text/javascript">
+    YAHOO.util.Event.onContentReady("menu_vertical", function () {
+      var elMenu = new YAHOO.widget.Menu("menu_vertical", { width: '150px' });
+      elMenu.render();
+      elMenu.show();
+    });
+    var elMenu = new YAHOO.widget.Menu("menu_vertical", { width: '150px' });
+    </script>
+</head>
+
+<body>
+    <div id="menu_vertical" class="yuimenu">
+        <div class="bd">
+          <ul class="first-of-type">
+          <li class="yuimenuitem"><a href="#">Lorem ipsum</a></li>
+          <li class="yuimenuitem"><a href="#">Dolor sit amet</a></li>
+          <li class="yuimenuitem">Consectetuer
+            <div id="consectetuer" class="yuimenu">
+            <div class="bd">
+              <ul>
+                <li class="yuimenuitem"><a href="#">Donec quis nunc</a></li>
+                <li class="yuimenuitem"><a href="#">Fusce eleifend</a></li>
+                <li class="yuimenuitem"><a href="#">Donec erat</a></li>
+                <li class="yuimenuitem"><a href="#">Faucibus orci</a></li>
+                <li class="yuimenuitem"><a href="#">Volutpat quam</a></li>
+              </ul>
+            </div>
+            </div>
+          </li>
+          <li class="yuimenuitem"><a href="#">Adipiscing elit</a></li>
+          </ul>
+        </div>
+        </div>
+</body>
+</html>

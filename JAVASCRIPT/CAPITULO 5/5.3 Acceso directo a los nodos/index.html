@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceso directo a los nodos</title>
+  </head>
+  <body>
+    <p>Esta página es <strong>muy sencilla</strong></p>
+    <p id="cabecera">cabecera</p>
+    <p name="prueba">prueba</p>
+    <p name="especial">especial</p>
+
+    <script>
+      //getElementsByTagName(nombreEtiqueta) obtiene todos los elementos de la página XHTML cuya etiqueta sea igual que el parámetro que se le pasa a la función
+      var parrafos = document.getElementsByTagName("p");
+
+      //Se podrían recorrer todos los párrafos de la página con el siguiente código:
+      for (var i = 0; i < parrafos.length; i++) {
+        var parrafo = parrafos[i];
+      }
+
+      //En este caso se buscan los elementos cuyo atributo name sea igual al parámetro proporcionado
+      var parrafoEspecial = document.getElementsByName("especial");
+
+      //Devuelve el elemento XHTML cuyo atributo id coincide con el parámetro indicado en la función
+      var cabecera = document.getElementById("cabecera");
+
+      // Crear nodo de tipo Element
+      var parrafo = document.createElement("p");
+
+      // Crear nodo de tipo Text
+      var contenido = document.createTextNode("Hola Mundo!");
+
+      // Añadir el nodo Text como hijo del nodo Element
+      parrafo.appendChild(contenido);
+
+      // Añadir el nodo Element como hijo de la pagina
+      document.body.appendChild(parrafo);
+
+      // Eliminar nodo
+      parrafo.parentNode.removeChild(parrafo);
+
+    </script>
+  </body>
+</html>

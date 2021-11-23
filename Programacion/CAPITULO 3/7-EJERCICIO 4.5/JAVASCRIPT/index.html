@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJEMPLO 4.5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    
+  </head>
+  <style>
+    body {
+      margin: 200px;
+    }
+  </style>
+
+  <body>
+    <h1 class="display-2">Nomina Semanal --salario neto--</h1>
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" />
+    </div>
+
+    <div class="mb-3">
+      <label for="horas" class="form-label">Horas trabajadas</label>
+      <input type="number" class="form-control" id="horas" />
+    </div>
+
+    <div class="mb-3">
+      <label for="tarifas" class="form-label">Tarifa horaria</label>
+      <input type="number" class="form-control" id="tarifas" />
+    </div>
+
+    <button onclick="valor()" class="btn btn-primary">
+      Obtener Salaraio neto
+    </button>
+
+    <script>
+      function valor() {
+        // 1. Inicio
+        let salario_bruto;
+        let impuestos;
+        let salario_neto;
+        // 2. Leer nombre, horas trabajadas, tarifa horaria.
+        let nombre = document.getElementById("nombre").value;
+        let horas = document.getElementById("horas").value;
+        let tarifas = document.getElementById("tarifas").value;
+        // 3. Verificar si horas trabajadas <= 35, en cuyo caso
+        if (horas <= 35) {
+          // 3.1 Salario_bruto = horas * tarifa; en caso contrario
+          salario_bruto = horas * tarifas;
+        } else {
+          // 3.2 salario_bruto = 35 * tarifa + (horas - 35) * tarifa
+          salario_bruto = 35 * tarifas + (horas - 35) * tarifas;
+        }
+        // 4. Calculo de impuestos
+        // 4.1 Si salario_bruto <= 2.000, entonces impuestos = 0
+        if (salario_bruto <= 2000) {
+          impuestos = 0;
+
+          // 4.2 Si salario_bruto <= 2.220, entonces
+        } else if (salario_bruto <= 2220) {
+          // 	impuestos = (salario_bruto - 2.000) * 0.20
+          impuestos = (salario_bruto - 2000) * 0.2;
+
+          // 4.3 Si salario_bruto > 2.220 entonces
+        } else {
+          // 	impuestos = (salario_bruto - 2.220) * 0.30 + (220 * 0.20)
+          impuestos = (salario_bruto - 2220) * 0.3 + 220 * 0.2;
+        }
+        // 5. Calculo del salario_neto
+        // 	salaraio_neto = salario_bruto - impuestos
+        salario_neto = salario_bruto - impuestos;
+
+        Swal.fire({
+          title: `El salario neto de </br> ${nombre} es : ${salario_neto}`,
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+        });
+        // 6. Fin
+      }
+    </script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

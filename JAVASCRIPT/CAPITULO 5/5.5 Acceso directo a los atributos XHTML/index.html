@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceso directo a los atributos XHTML</title>
+  </head>
+  <body>
+    <a id="enlace" href="http://www...com">Enlace</a>
+
+    <img id="imagen" style="margin: 0; border: 0" src="logo.png" />
+
+    <script>
+      var enlace = document.getElementById("enlace");
+      alert(enlace.href); // muestra http://www...com
+
+      var imagen = document.getElementById("imagen");
+      alert(imagen.style.margin);
+    </script>
+  </body>
+</html>
