@@ -1,0 +1,52 @@
+EJEMPLO 4.5
+Se desea obtener la nomina semanal --salario neto-- de los empleados de una empresa cuyo trabajo se paga por horas y del modo siguiente:
+
+*Las horas inferiores o iguales a 35 horas (normales) se pagan a una tarifa determinada que se debe introducir por teclado al igual que el numero de horas y el nombre del trabajo.
+*Las horas superiores a 35 se pagaran como extras a un promedio de 1,5 horas normales
+*Los impuestos a deducir a los trabajadores varian en funcion de sueldo mensual
+--sueldo <= 2,000 libre de impuestos
+--las siguientes 220 euros al 20 por 100
+-- el resto, al 30 por 100
+
+1. Inicio 
+2. Leer nombre, horas trabajadas, tarifa horaria. 		-- nombre: JOSE JUAN |horas trabajadas: 56 |tarifa horaria: 35
+3. Verificar si horas trabajadas <= 35, en cuyo caso		-- horas trabajadas (56) <= 35 , falso en caso contrario
+	salario_bruto = horas * tarifa; en caso contrario	-- 
+	salario_bruto = 35 * tarifa + (horas - 35) * tarifa	--  salario_bruto = (35 * 35) + ((56 -35) * 35) |
+								    salario_bruto = (1225) + ((21) * 35) | 
+								    salario_bruto = (1225) + (735)
+								    salario_bruto =  1960
+ 4. Calculo de impuestos
+	si salario_bruto <= 2.000, entonces impuestos = 0	-- salario_bruto <= 2000, true entonces impuestos 0
+	si salario_bruto <= 2.220, entonces 
+	impuestos = (salario_bruto - 2.000) * 0.20
+	si salario_bruto > 2.220 entonces
+	impuestos = (salario_bruto - 2.220) * 0.30 + (220 * 0.20)
+5. Calculo del salario_neto
+	salaraio_neto = salario_bruto - impuestos	       -- salaraio_neto = 1960 - 0
+							       -- salaraio_neto = 1960
+6. Fin
+	
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+1. Inicio 
+2. Leer nombre, horas trabajadas, tarifa horaria. 		-- nombre: LUCIANO |horas trabajadas: 35 |tarifa horaria: 60
+3. Verificar si horas trabajadas <= 35, en cuyo caso		-- horas trabajadas (35) <= 35 , true entonces
+	salario_bruto = horas * tarifa; en caso contrario	-- salario_bruto = 35 * 60
+								-- salario_bruto = 2100
+	salario_bruto = 35 * tarifa + (horas - 35) * tarifa	--  
+ 4. Calculo de impuestos
+	si salario_bruto <= 2.000, entonces impuestos = 0	
+	si salario_bruto <= 2.220, entonces 			-- salario_bruto <= 2220, true entonces 
+	impuestos = (salario_bruto - 2.000) * 0.20		-- impuestos = (2100 - 2.000) * 0.20
+								-- impuestos = (100) * 0.20
+								-- impuestos = 20
+	si salario_bruto > 2.220 entonces
+	impuestos = (salario_bruto - 2.220) * 0.30 + (220 * 0.20)
+5. Calculo del salario_neto
+	salaraio_neto = salario_bruto - impuestos	       -- salaraio_neto = 2100 - 20
+							       -- salaraio_neto = 2080
+6. Fin
+	
+
+		
