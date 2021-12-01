@@ -1,0 +1,7 @@
+{
+  "name": "05 mycomponents",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
