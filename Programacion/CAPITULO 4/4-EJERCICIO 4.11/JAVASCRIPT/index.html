@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 4.11</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+
+        body{
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        input[type=radio] {
+            width: 40px;
+            height: 40px;
+        }
+
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .parrafo{
+            margin-top: 20px;
+            color: blue;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1">Ejercicio 4.11</h1>
+      <p class="h4">Se desea leer por teclado un numero comprendido entre 1 y 10 , se desea visualizar si el numero es par e impar</p>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"/>
+        <label class="form-check-label" for="inlineRadio1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"/>
+        <label class="form-check-label" for="inlineRadio2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" />
+        <label class="form-check-label" for="inlineRadio3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4" />
+        <label class="form-check-label" for="inlineRadio4">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5" />
+        <label class="form-check-label" for="inlineRadio5">5</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6" />
+        <label class="form-check-label" for="inlineRadio6">6</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7" />
+        <label class="form-check-label" for="inlineRadio7">7</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8" value="8" />
+        <label class="form-check-label" for="inlineRadio8">8</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9" value="9" />
+        <label class="form-check-label" for="inlineRadio9">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10" value="10" />
+        <label class="form-check-label" for="inlineRadio10">10</label>
+      </div>
+      <div>
+        <p class="h3 parrafo"></p>
+      </div>
+    </div>
+    <script>
+
+        document.addEventListener("click", (e) => {
+            p = document.querySelector(".parrafo")
+            if(e.target.matches(".form-check-input")){
+                console.log(e.target.value);
+                let numero = parseInt((e.target.value));
+
+                switch(numero)
+                {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 9:
+                        p.innerHTML=`El numero seleccionado ${numero} es impar`;
+                        break;
+                    case 2:
+                    case 4:
+                    case 6:
+                    case 8:
+                    case 10:
+                        p.innerHTML=`El numero seleccionado ${numero} es par`;
+                        break;
+                }
+            }
+            
+        })
+
+        
+    </script>
+
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>

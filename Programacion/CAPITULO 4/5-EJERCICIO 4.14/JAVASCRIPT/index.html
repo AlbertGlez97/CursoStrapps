@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 4.14</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+</head>
+<body>
+    <div class="container">
+        <h1>EJERCICIO 4.14</h1>
+
+        <p>Algoritmo que nos indica si un numero entero, leido de teclado, tiene 1,2,3 o  mas de 3 digitos. Considerando los negativos</p>
+    
+        <div class="row">
+            <div class="input-field col s6">
+            <input id="first_name2" type="number" class="validate">
+            <label class="active" for="first_name2">Ingresa un numero</label>
+            <a class="waves-effect indigo lighten-2 btn" onclick="digitos()"><i class="material-icons left">Enviar</i></a>
+            </div>
+        </div>
+        
+        <div class="card-panel teal lighten-2"><p class="parrafo"></p></div>
+            
+    </div>
+
+    <script>
+        function digitos(){
+            let $p= document.querySelector(".parrafo")
+            let $num = parseInt(document.querySelector(".validate").value)
+            
+            if(-9 <= $num && $num <= 9){
+                $p.innerHTML=`El numero ${$num} tiene 1 Digito`;
+            }else if(-99 <= $num && $num <= 99){
+                $p.innerHTML=`El numero ${$num} tiene 2 Digito`;
+            }else if(-999 <= $num && $num <= 999){
+                $p.innerHTML=`El numero ${$num} tiene 3 Digito`;
+            }else{
+                $p.innerHTML=`El numero ${$num} tiene mas 3 Digito`;
+            }
+
+        }
+    </script>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

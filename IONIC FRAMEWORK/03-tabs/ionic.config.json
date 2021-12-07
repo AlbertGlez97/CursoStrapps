@@ -1,0 +1,7 @@
+{
+  "name": "03-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

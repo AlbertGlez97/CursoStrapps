@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "02-sidemenu",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

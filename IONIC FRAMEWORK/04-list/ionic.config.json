@@ -1,0 +1,7 @@
+{
+  "name": "04-list",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
