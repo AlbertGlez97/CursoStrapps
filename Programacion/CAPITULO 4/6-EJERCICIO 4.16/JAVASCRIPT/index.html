@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4.16</title>
+</head>
+<body>
+    <h1>Ejercicio 4.16</h1>
+    <label for="a">A</label>
+    <input type="text" name="a" id="a"><br>
+    <label for="b">B</label>
+    <input type="text" name="b" id="b"><br>
+    <label for="c">C</label>
+    <input type="text" name="c" id="c"><br><br>
+    <button id="resultado">Enviar</button>
+    <br>
+    <p>
+        <span id="resulMax"></span>
+        <hr>
+        <span id="resulMin"></span>
+    </p>
+
+    <script>
+        document.getElementById('resultado').onclick = () => {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            let $resulMax = document.getElementById("resulMax");
+            let $resulMin = document.getElementById("resulMin");
+
+            if(a > b && a > c)
+            {
+                $resulMax.innerHTML="EL MAXIMO ES A";
+                console.log("EL MAXIMO ES A")
+                if(b < c){
+                    $resulMin.innerHTML="EL MINIMO ES B";
+                    console.log("EL MINIMO ES B")
+                }else{
+                    $resulMin.innerHTML="EL MINIMO ES C";
+                    console.log("EL MINIMO ES B")
+                }
+                    
+            }
+
+            if(b > a && b > c)
+            {
+                $resulMax.innerHTML="EL MAXIMO ES B";
+                console.log("EL MAXIMO ES B")
+                if(a < c){
+                    $resulMin.innerHTML="EL MINIMO ES A";
+                    console.log("EL MINIMO ES A")
+                }else{
+                    $resulMin.innerHTML="EL MINIMO ES C";
+                    console.log("EL MINIMO ES A")
+                }
+            }
+
+            if(c > a && c > b)
+            {
+                $resulMax.innerHTML="EL MAXIMO ES C";
+                console.log("EL MAXIMO ES C")
+                if(a < c){
+                    $resulMin.innerHTML="EL MINIMO ES A";
+                    console.log("EL MINIMO ES A")
+                }else{
+                    $resulMin.innerHTML="EL MINIMO ES B";
+                    console.log("EL MINIMO ES B")
+                }
+                    
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
