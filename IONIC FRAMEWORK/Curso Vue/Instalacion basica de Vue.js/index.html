@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalacion basica de Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+<body>
+    <h1>Documento html</h1>
+
+    <!-- Propiedades de Vue -->
+    <div id="miApp">
+        <!-- Importar la propiedad que esta en data -->
+        {{mensaje}}
+    </div>
+    <script>
+        //Crear un objeto de Vue e importa
+        new Vue({
+            //Crear un enlace con el elemento div
+            el:'#miApp',
+            data:{
+                mensaje:'Hola Mundo'
+            }
+        })
+    </script>
+</body>
+</html>

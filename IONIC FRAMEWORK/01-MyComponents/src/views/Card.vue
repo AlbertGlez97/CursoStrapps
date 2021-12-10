@@ -65,8 +65,6 @@
 </template>
 <script>
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/vue';
-
-import { pin, walk, warning, wifi, wine } from 'ionicons/icons';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

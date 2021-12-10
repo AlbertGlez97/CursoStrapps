@@ -7,6 +7,9 @@ import Badge from '../views/Badge.vue'
 import Button from '../views/Button.vue'
 import Card from '../views/Card.vue'
 import Checboxs from '../views/Checboxs.vue'
+import Ionchip from '../views/Ionchip.vue'
+import Ioncontent from '../views/Ioncontent.vue'
+import Iondatetime from '../views/Iondatetime.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -47,6 +50,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/Checboxs',
     name: 'Checboxs',
     component: Checboxs
+  },
+  {
+    path: '/Ionchip',
+    name: 'Ionchip',
+    component: Ionchip
+  },
+  {
+    path: '/Ioncontent',
+    name: 'Ioncontent',
+    component: Ioncontent
+  },
+  {
+    path: '/Iondatetime',
+    name: 'Iondatetime',
+    component: Iondatetime
   }
 ]
 
