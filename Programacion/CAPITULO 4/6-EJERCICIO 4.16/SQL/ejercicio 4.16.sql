@@ -4,86 +4,81 @@ GO
 USE EJERCICIO_4_16
 GO
 
-CREATE TABLE valoresABC
-(
-ID INT IDENTITY(1,1) NOT NULL,
-A INT,
-B INT,
-C INT,
-MAYOR VARCHAR(100),
-MENOR VARCHAR(100)
+-- CREACIÓN TABLA
+CREATE TABLE VALORES(
+	ID INT IDENTITY(1,1)PRIMARY KEY,
+	VALOR_A INT,
+	VALOR_B INT,
+	VALOR_C INT,
+	MAYOR_LETRA VARCHAR(5),
+	MAYOR_VALOR INT,
+	MENOR_LETRA VARCHAR(5),
+	MENOR_VALOR INT
 )
-
-INSERT INTO valoresABC(A,B,C) VALUES(1,2,3)
-INSERT INTO valoresABC(A,B,C) VALUES(2,1,3)
-INSERT INTO valoresABC(A,B,C) VALUES(2,3,1)
-INSERT INTO valoresABC(A,B,C) VALUES(3,2,1)
-INSERT INTO valoresABC(A,B,C) VALUES(3,1,2)
-INSERT INTO valoresABC(A,B,C) VALUES(1,3,2)
-
-
-SELECT * FROM valoresABC
-GO
-
-CREATE FUNCTION DBO.MINIMO(@A INT,@B INT,@C INT)
-RETURNS VARCHAR
-AS
-BEGIN
---3.- Validar si A  > B
-            if (@A > @B)
-            BEGIN
-                --3.1.- Si A es mayor, validar A < C
-                if (@A > @C)
-                BEGIN
-                    --3.1.2.- Si A es mayor, validar B < C
-                    if (@B < @C)
-                    BEGIN
-                        --3.1.2.1.- Si B es menor, EL MAXIMO ES A Y EL MINIMO ES B
-                        Console.WriteLine("EL MAXIMO ES A");
-                        Console.WriteLine("EL MINIMO ES B");
-                    END
-                    ELSE
-                    BEGIN
-                        --3.1.2.2.- Si B no es menor, EL MAXIMO ES A Y EL MINIMO ES C
-                        Console.WriteLine("EL MAXIMO ES A");
-                        Console.WriteLine("EL MINIMO ES C");
-                    END
-                END
-                else
-                BEGIN
-                    --3.1.3.- Si A no es mayor, EL MAXIMO ES C Y EL MINIMO ES B
-                    Console.WriteLine("EL MAXIMO ES C");
-                    Console.WriteLine("EL MINIMO ES B");
-                END
-
-            END
-            else
-            BEGIN
-                --3.2.- Si A no es mayor, validar si B > C
-                if (@B > @C)
-                BEGIN
-                    --3.2.1.- Si B es mayor, Validar A < C
-                    if (@A < @C)
-                    BEGIN
-                        --3.2.1.1.- Si A es menor, EL MAXIMO ES B Y EL MINIMO ES A
-                        Console.WriteLine("EL MAXIMO ES B");
-                        Console.WriteLine("EL MINIMO ES A");
-                    END
-                    else
-                    BEGIN
-                        --3.2.1.2.- Si A no es menor, El MAXIMO ES B Y EL MINIMO ES C
-                        Console.WriteLine("EL MAXIMO ES B");
-                        Console.WriteLine("EL MINIMO ES C");
-                    END
-                END
-                else
-                BEGIN
-                    --3.2.2.- Si B no es mayor, EL MAXIMO ES C Y EL MINIMO ES A
-                    Console.WriteLine("EL MAXIMO ES C");
-                    Console.WriteLine("EL MINIMO ES A");
-                END
-            END
-            --4.- Fin  											
-  
-END
-GO
+-- INSERTAR VALORES
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(1,2,3)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(4,6,5)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(9,7,6)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(12,11,10)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(13,15,14)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(16,17,18)
+INSERT VALORES(VALOR_A,VALOR_B,VALOR_C)VALUES(19,21,20)
+-- REFRESCAR
+-- FUNCIONALIDAD CON CASE EN UPDATE 'MAYOR_LETRA'
+UPDATE VALORES
+SET    MAYOR_LETRA = CASE
+						WHEN VALOR_A > VALOR_B THEN
+													CASE
+														WHEN VALOR_A > VALOR_C THEN 'A'
+														ELSE 'C'
+													END
+						ELSE
+							CASE
+								WHEN VALOR_B > VALOR_C THEN 'B'
+								ELSE 'C'
+							END
+						END
+-- FUNCIONALIDAD CON CASE EN UPDATE 'MAYOR_VALOR'
+UPDATE VALORES
+SET    MAYOR_VALOR = CASE
+						WHEN VALOR_A > VALOR_B THEN
+													CASE
+														WHEN VALOR_A > VALOR_C THEN VALOR_A
+														ELSE VALOR_C
+													END
+						ELSE
+							CASE
+								WHEN VALOR_B > VALOR_C THEN VALOR_B
+								ELSE VALOR_C
+							END
+						END
+-- FUNCIONALIDAD CON CASE EN UPDATE 'MENOR_VALOR'
+UPDATE VALORES
+SET    MENOR_VALOR = CASE
+						WHEN VALOR_A < VALOR_B THEN
+													CASE
+														WHEN VALOR_A < VALOR_C THEN VALOR_A
+														ELSE VALOR_C
+													END
+						ELSE
+							CASE
+								WHEN VALOR_B < VALOR_C THEN VALOR_B
+								ELSE VALOR_C
+							END
+						END
+-- FUNCIONALIDAD CON CASE EN UPDATE 'MENOR_LETRA'
+UPDATE VALORES
+SET    MENOR_LETRA = CASE
+						WHEN VALOR_A < VALOR_B THEN
+													CASE
+														WHEN VALOR_A < VALOR_C THEN 'A'
+														ELSE 'C'
+													END
+						ELSE
+							CASE
+								WHEN VALOR_B < VALOR_C THEN 'B'
+								ELSE 'C'
+							END
+						END
+-- VISUALIZAR REGISTROS
+SELECT * FROM VALORES

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 4.18</title>
+  </head>
+  <body>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">HORA</th>
+            <th scope="col">SEGUNDOS_INCREMENTO</th>
+            <th scope="col">HORA_NUEVA</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+          
+        </tbody>
+        <button type="button" id="btn" onclick="" class="btn btn-warning">Agregar nueva hora</button>
+      </table>
+
+
+    <script>
+
+       let $btn = document.getElementById('btn')
+       let $tbody = document.getElementById('cuerpoTabla')
+       $btn.addEventListener("click", () => {
+        FN_AGREGAR_SEGUNDOS(new Date())
+       })
+
+
+      function FN_AGREGAR_SEGUNDOS(HORA_ACTUAL) {
+        //Nos da segundos aleatorios 
+        let SEGUNDOS_INCREMENTAR = Math.floor(Math.random()*59);
+        
+        let HORA;
+        let MINUTOS;
+        let SEGUNDOS;
+        let NUEVA_HORA;
+
+        //1.- Inicio
+        //2.- Leer la HORA
+        HORA = HORA_ACTUAL.getHours();
+        //3.- Leer los MINUTOS
+        MINUTOS = HORA_ACTUAL.getMinutes();
+        //4.- Leer los SEGUNDOS
+        SEGUNDOS = HORA_ACTUAL.getSeconds();
+        //5.- Leer los SEGUNDOS_INCREMENTO
+        //6.- Validar si HORA esta entre 0-23 y validar si MINUTOS esta entre 0-59 y validar si SEGUNDOS esta entre 0-59 y validar SEGUNDOS_INCREMENTO esta entre 0-59
+        if(
+          HORA <= 23 &&
+            MINUTOS <= 59 &&
+            SEGUNDOS <= 59 &&
+            SEGUNDOS_INCREMENTAR <= 59
+        );
+        {
+          //  6.1- Si esta dentro de los rangos hacer:
+          //      sumar SEGUNDOS = SEGUNDOS + SEGUNDOS_INCREMENTO
+          SEGUNDOS = SEGUNDOS + SEGUNDOS_INCREMENTAR;
+          //      Si SEGUNDOS >=60
+          if(SEGUNDOS >= 60);
+          {
+            //          SEGUNDOS = SEGUNDOS - 60
+            SEGUNDOS = SEGUNDOS - 60;
+            //          Sumar MINUTOS = MINUTOS + 1
+            MINUTOS = MINUTOS + 1;
+            //          Si MINUTOS es igual a 60
+            if((MINUTOS = 60));
+            {
+              //              MINUTOS = 0
+              MINUTOS = 0;
+              //              HORA = HORA + 1
+              HORA = HORA + 1;
+              //              Si HORA es igual a 24, hacer:
+              if((HORA = 24));
+              {
+                //                  HORA = 0
+                HORA = 0;
+              }
+              //              Fin si
+            }
+            //          Fin si
+          }
+          //      Fin si
+          //      Imprimir la nueva hora HORA:MINUTOS:SEGUNDOS
+          NUEVA_HORA = HORA +':'+ MINUTOS +':'+ SEGUNDOS;
+
+          
+          //  6.2.- Si no esta dentro  de los rangos mandar mensaje de error
+          let tbody
+          tbody.innerHTML=`<tr>
+                            <th scope="row">${HORA_ACTUAL}</th>
+                            <td>${SEGUNDOS_INCREMENTAR}</td>
+                            <td>${NUEVA_HORA}</td>
+                        </tr>`
+
+          $tbody.appendChild(tbody);
+          //7.-Fin
+        }
+      }
+    </script>
+  </body>
+</html>

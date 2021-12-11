@@ -1,0 +1,105 @@
+CREATE DATABASE EJERCICIO_4_18
+GO
+
+USE EJERCICIO_4_18
+GO
+
+CREATE TABLE HORAS 
+(
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    HORA TIME,
+    SEGUNDOS_INCREMENTO INT,
+    HORA_NUEVA TIME
+)
+GO
+
+DECLARE @HORA_ACTUAL TIME = CONVERT(TIME,CONVERT(VARCHAR(8),GETDATE(),108))
+DECLARE @CONTADOR INT = 1
+DECLARE @SEGUNDOS_INCREMENTO INT
+
+WHILE @CONTADOR <= 1000
+BEGIN
+
+    SET @SEGUNDOS_INCREMENTO = FLOOR(RAND()*59)
+
+    INSERT INTO HORAS(HORA,SEGUNDOS_INCREMENTO)
+    VALUES(@HORA_ACTUAL,@SEGUNDOS_INCREMENTO)
+
+    SET @CONTADOR = @CONTADOR + 1
+END
+GO
+
+SELECT * FROM HORAS
+GO
+
+UPDATE HORAS
+SET        HORA_NUEVA =  dbo.FN_AGREGAR_SEGUNDOS(HORA,SEGUNDOS_INCREMENTO)
+GO
+
+DECLARE @TIME TIME = '01:59:59'
+SELECT @TIME, dbo.FN_AGREGAR_SEGUNDOS(@TIME,5)
+GO
+
+CREATE FUNCTION FN_AGREGAR_SEGUNDOS(@HORA_ACTUAL TIME,@SEGUNDOS_INCREMENTAR INT)
+RETURNS TIME
+AS
+BEGIN
+
+    DECLARE @HORA INT
+    DECLARE @MINUTOS INT
+    DECLARE @SEGUNDOS INT
+    DECLARE @NUEVA_HORA TIME  
+
+--1.- Inicio
+--2.- Leer la HORA
+    SET @HORA =  DATEPART(HOUR, @HORA_ACTUAL)
+--3.- Leer los MINUTOS
+    SET @MINUTOS =  DATEPART(MINUTE, @HORA_ACTUAL)
+--4.- Leer los SEGUNDOS
+    SET @SEGUNDOS =  DATEPART(SECOND, @HORA_ACTUAL)
+--5.- Leer los SEGUNDOS_INCREMENTO
+--6.- Validar si HORA esta entre 0-23 y validar si MINUTOS esta entre 0-59 y validar si SEGUNDOS esta entre 0-59 y validar SEGUNDOS_INCREMENTO esta entre 0-59
+IF @HORA BETWEEN 0 AND 23 AND
+   @MINUTOS BETWEEN 0 AND 59 AND
+   @SEGUNDOS BETWEEN 0 AND 59 AND
+   @SEGUNDOS_INCREMENTAR BETWEEN 0 AND 59
+BEGIN
+   
+--  6.1- Si esta dentro de los rangos hacer:
+--      sumar SEGUNDOS = SEGUNDOS + SEGUNDOS_INCREMENTO
+    SET @SEGUNDOS = @SEGUNDOS + @SEGUNDOS_INCREMENTAR
+--      Si SEGUNDOS >=60
+        IF @SEGUNDOS >= 60
+        BEGIN
+--          SEGUNDOS = SEGUNDOS - 60
+            SET @SEGUNDOS = @SEGUNDOS - 60
+--          Sumar MINUTOS = MINUTOS + 1
+            SET @MINUTOS = @MINUTOS + 1
+--          Si MINUTOS es igual a 60
+            IF @MINUTOS = 60
+            BEGIN
+--              MINUTOS = 0
+                SET @MINUTOS = 0
+--              HORA = HORA + 1
+                SET @HORA = @HORA + 1
+--              Si HORA es igual a 24, hacer:
+                IF @HORA = 24
+                BEGIN 
+--                  HORA = 0
+                    SET @HORA = 0
+                END 
+--              Fin si
+            END
+--          Fin si
+        END
+--      Fin si
+END
+--      Imprimir la nueva hora HORA:MINUTOS:SEGUNDOS
+SET @NUEVA_HORA = CONVERT(TIME, RIGHT('0' + CONVERT(VARCHAR, @HORA),2)+ ':'+
+                                RIGHT('0' + CONVERT(VARCHAR, @MINUTOS),2)+ ':'+
+                                RIGHT('0' + CONVERT(VARCHAR, @SEGUNDOS),2))
+--  6.2.- Si no esta dentro  de los rangos mandar mensaje de error
+
+    RETURN @NUEVA_HORA
+--7.-Fin
+END
