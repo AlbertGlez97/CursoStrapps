@@ -1,0 +1,7 @@
+{
+  "name": "ionicons Vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

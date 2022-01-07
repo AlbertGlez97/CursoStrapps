@@ -10,6 +10,7 @@ import Checboxs from '../views/Checboxs.vue'
 import Ionchip from '../views/Ionchip.vue'
 import Ioncontent from '../views/Ioncontent.vue'
 import Iondatetime from '../views/Iondatetime.vue'
+import Ionicons from '../views/Ionicons.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -65,6 +66,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/Iondatetime',
     name: 'Iondatetime',
     component: Iondatetime
+  },
+  {
+    path: '/Ionicons',
+    name: 'Ionicons',
+    component: Ionicons
   }
 ]
 

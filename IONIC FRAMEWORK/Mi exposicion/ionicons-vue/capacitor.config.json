@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "ionicons Vue",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

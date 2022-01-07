@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJERCICIO 5.16</title>
+  </head>
+  <body>
+    <label for="nombreCiudad">Ingresa nombre de Ciudad </label> <br />
+    <input type="text" name="nombreCiudad" id="nombreCiudad" />
+
+    <br />
+
+    <label for="poblacionCiudad">Ingresa numero de Poblacion</label> <br />
+    <input type="number" name="poblacionCiudad" id="poblacionCiudad" />
+
+    <br />
+
+    <button
+      id="agregar"
+      style="
+        background-color: turquoise;
+        border: 1px solid turquoise;
+        margin-top: 10px;
+        width: 180px;
+        height: 25px;
+      "
+    >
+      Agregar
+    </button>
+
+    <br /><br />
+
+    <table>
+      <thead>
+        <th>nombreCiudad</th>
+        <th>poblacion</th>
+      </thead>
+      <tbody id="cuerpoTabla"></tbody>
+    </table>
+
+    <br />
+
+    <button
+      id="obtenerPoblacionMayor"
+      style="
+        background-color: turquoise;
+        border: 1px solid turquoise;
+        margin-top: 10px;
+        width: 180px;
+        height: 25px;
+      "
+    >
+      Obtener Poblacion Mayor
+    </button>
+
+    <script>
+      let provincias = [],
+        $agregar = document.getElementById("agregar"),
+        $obtenerPoblacionMayor = document.getElementById(
+          "obtenerPoblacionMayor"
+        ),
+        $cuerpoTabla = document.getElementById("cuerpoTabla");
+
+      $agregar.addEventListener("click", (e) => {
+        $nombreCiudad = document.getElementById("nombreCiudad").value;
+        $poblacionCiudad = document.getElementById("poblacionCiudad").value;
+        ciudades($poblacionCiudad, $nombreCiudad);
+        agregar();
+      });
+
+      $obtenerPoblacionMayor.addEventListener("click", (e) => {
+    
+        let $provincias = ordenarMenorMayor();
+        let poblacionMayor = $provincias[$provincias.length - 1];
+        console.log($provincias);
+        console.log(poblacionMayor);
+      });
+
+      function agregar() {
+        $cuerpoTabla.innerHTML = ``;
+
+        provincias.forEach((elemento) => {
+          const $tr = document.createElement("tr");
+          $tr.innerHTML = `<td>${elemento.nombre}</td>
+                             <td>${elemento.cantidad}</td>`;
+
+          $cuerpoTabla.appendChild($tr);
+        });
+      }
+
+      function ciudades(poblacionCiudad, nombreCiudad) {
+        let poblacion = {
+          cantidad: poblacionCiudad,
+        };
+
+        let nombre = {
+          nombre: nombreCiudad,
+        };
+
+        provincias.push(Object.assign(poblacion, nombre));
+      }
+
+      function ordenarMenorMayor() {
+        provincias.sort(function (a, b){
+          a.cantidad - b.cantidad;
+
+          return provincias;
+        })
+      }
+
+      //Cada elemento se compará así con su inmediato sucesor para ordenarse según sea mayor o menor que este. Una vez la pareja está ordenada correctamente, se toma el último número de cada tupla para volver a compararlo con el siguiente.
+      // function ordenacionBurbuja(lista) {
+
+      //   var n, i, k, aux;
+      //   n = lista.length;
+      //   console.log(lista); // Mostramos, por consola, la lista desordenada
+      //   // Algoritmo de burbuja
+      //   for (k = 1; k < n; k++) {
+      //     for (i = 0; i < n - k; i++) {
+      //       if (lista[i].cantidad > lista[i + 1].cantidad) {
+      //         aux = lista[i];
+      //         lista[i] = lista[i + 1];
+      //         lista[i + 1] = aux;
+      //       }
+      //     }
+      //   }
+      //   return lista;
+      // }
+    </script>
+  </body>
+</html>
